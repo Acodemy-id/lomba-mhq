@@ -1,1187 +1,1185 @@
-/**
- * DATA 30 PAKET SOAL LOMBA MHQ - REVISI RANDOM
- * Semua soal dari Juz 29 (Tabarak) dan Juz 30 ('Amma)
- * 
- * Format Soal:
- * - Soal 1 & 2: Sambung ayat, kunci jawaban = 3 ayat lengkap (RANDOM, tidak selalu awal)
- * - Soal 3: Bacakan 5 ayat
- * - Soal 4: Sambung surat (ayat terakhir ke awal surat berikutnya)
- */
+// Data 30 Paket Soal MHQ - Juz 29-30
+// Generated for Lomba MHQ
 
-const PAKET_SOAL = [
+const dataSoal = [
+  // PAKET 1
   {
     "id": 1,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "فِيهَا كُتُبٌ قَيِّمَةٌ وَمَا تَفَرَّقَ الَّذِينَ أُوتُوا الْكِتَابَ إِلَّا مِن بَعْدِ مَا جَاءَتْهُمُ الْبَيِّنَةُ",
-        "referensi": "Surat Al-Bayyinah: 3-4",
-        "kunciLabel": "3 Ayat Surat Al-Bayyinah (ayat 3-5):",
-        "kunciArab": "(٣) فِيهَا كُتُبٌ قَيِّمَةٌ ۝ (٤) وَمَا تَفَرَّقَ الَّذِينَ أُوتُوا الْكِتَابَ إِلَّا مِن بَعْدِ مَا جَاءَتْهُمُ الْبَيِّنَةُ ۝ (٥) وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ"
+        "surat": "Al-Mulk",
+        "ayat": 1,
+        "teks": "تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ ۝",
+        "lanjutan": "الَّذِي خَلَقَ الْمَوْتَ وَالْحَيَاةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًا ۚ وَهُوَ الْعَزِيزُ الْغَفُورُ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "إِن كُلُّ نَفْسٍ لَّمَّا عَلَيْهَا حَافِظٌ فَلْيَنظُرِ الْإِنسَانُ مِمَّ خُلِقَ خُلِقَ مِن مَّاءٍ دَافِقٍ",
-        "referensi": "Surat At-Tariq: 6-8",
-        "kunciLabel": "3 Ayat Surat At-Tariq (ayat 6-8):",
-        "kunciArab": "(٦) إِن كُلُّ نَفْسٍ لَّمَّا عَلَيْهَا حَافِظٌ ۝ (٧) فَلْيَنظُرِ الْإِنسَانُ مِمَّ خُلِقَ ۝ (٨) خُلِقَ مِن مَّاءٍ دَافِقٍ"
+        "surat": "Al-Mulk",
+        "ayat": 3,
+        "teks": "وَالَّذِينَ كَفَرُوا بِرَبِّهِمْ يَتَنَعَّمُونَ وَيَتْمَتَّعُونَ وَتُكْفَرُونَ ...",
+        "lanjutan": "فَمَا لَنَا مِنْ شَافِعِينَ ۝ وَلَا صَدِيقٍ حَمِيمٍ ۝ فَلَوْ أَنَّ لَنَا كَرَّةً فَنَكُونَ مِنَ الْمُؤْمِنِينَ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Ma'arij ayat 19-23",
-        "rentangAyat": "Ayat 19-23",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Ma'arij 19-23):",
-        "kunciArab": "[Ayat 19-23 Surat Al-Ma'arij]"
+        "surat": "Al-Qalam",
+        "ayat": "1-4",
+        "perintah": "Bacakanlah ayat 1-4 dari Surat Al-Qalam"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ",
-        "kunciLabel": "Surat berikutnya: Al-Bayyinah - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Bayyinah] ۝ (٢) [Ayat 2 Surat Al-Bayyinah] ۝ (٣) [Ayat 3 Surat Al-Bayyinah] ۝ (٤) [Ayat 4 Surat Al-Bayyinah] ۝ (٥) [Ayat 5 Surat Al-Bayyinah]"
+        "surat_awal": "Al-Haqqah",
+        "ayat_awal": 52,
+        "teks": "فَسَبِّحْ بِاسْمِ رَبِّكَ الْعَظِيمِ ۝",
+        "surat_lanjutan": "Al-Ma'arij",
+        "ayat_lanjutan": 1,
+        "lanjutan": "سَأَلَ سَائِلٌ بِعَذَابٍ وَاقِعٍ ۝ لِّلْكَافِرِينَ لَيْسَ لَهُ دَافِعٌ"
       }
     ]
   },
+  // PAKET 2
   {
     "id": 2,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي أَحْسَنِ تَقْوِيمٍ ثُمَّ رَدَدْنَاهُ أَسْفَلَ سَافِلِينَ",
-        "referensi": "Surat At-Tin: 4-5",
-        "kunciLabel": "3 Ayat Surat At-Tin (ayat 4-6):",
-        "kunciArab": "(٤) لَقَدْ خَلَقْنَا الْإِنسَانَ فِي أَحْسَنِ تَقْوِيمٍ ۝ (٥) ثُمَّ رَدَدْنَاهُ أَسْفَلَ سَافِلِينَ ۝ (٦) إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ"
+        "surat": "Al-Mulk",
+        "ayat": 13,
+        "teks": "وَأَسِرُّوا قَوْلَكُمْ أَوِ اجْهَرُوا بِهِ ۖ إِنَّهُ عَلِيمٌ بِذَاتِ الصُّدُورِ ۝",
+        "lanjutan": "أَلَا يَعْلَمُ مَنْ خَلَقَ وَهُوَ اللَّطِيفُ الْخَبِيرُ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِشِمَالِهِ فَيَقُولُ يَا لَيْتَنِي لَمْ أُوتَ كِتَابِيهْ وَلَمْ أَدْرِ مَا حِسَابِيهْ",
-        "referensi": "Surat Al-Haqqah: 25-27",
-        "kunciLabel": "3 Ayat Surat Al-Haqqah (ayat 25-27):",
-        "kunciArab": "(٢٥) وَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِشِمَالِهِ فَيَقُولُ يَا لَيْتَنِي لَمْ أُوتَ كِتَابِيهْ ۝ (٢٦) وَلَمْ أَدْرِ مَا حِسَابِيهْ ۝ (٢٧) يَا لَيْتَهَا كَانَتِ الْقَاضِيَةَ"
+        "surat": "Al-Qalam",
+        "ayat": 51,
+        "teks": "وَإِن يَكَادُ الَّذِينَ كَفَرُوا لَيُزْلِقُونَكَ بِأَبْصَارِهِمْ لَمَّا سَمِعُوا الذِّكْرَ ...",
+        "lanjutan": "وَيَقُولُونَ إِنَّهُ لَمَجْنُونٌ ۝ وَمَا هُوَ إِلَّا ذِكْرٌ لِّلْعَالَمِينَ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Ma'un ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Ma'un 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-Ma'un]"
+        "surat": "Al-Haqqah",
+        "ayat": "1-3",
+        "perintah": "Bacakanlah ayat 1-3 dari Surat Al-Haqqah"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...عَلِيمٌ خَبِيرٌ",
-        "kunciLabel": "Surat berikutnya: Al-Mutaffifin - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Mutaffifin] ۝ (٢) [Ayat 2 Surat Al-Mutaffifin] ۝ (٣) [Ayat 3 Surat Al-Mutaffifin] ۝ (٤) [Ayat 4 Surat Al-Mutaffifin] ۝ (٥) [Ayat 5 Surat Al-Mutaffifin]"
+        "surat_awal": "Al-Ma'arij",
+        "ayat_awal": 44,
+        "teks": "فَتَبَسَّمُ ضَاحِكًا مِّن قَوْلِهَا وَقَالَ رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَىٰ وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحًا تَرْضَاهُ وَأَدْخِلْنِي بِرَحْمَتِكَ فِي عِبَادِكَ الصَّالِحِينَ ۝",
+        "surat_lanjutan": "Nuh",
+        "ayat_lanjutan": 1,
+        "lanjutan": "إِنَّا أَرْسَلْنَا نُوحًا إِلَىٰ قَوْمِهِ أَنْ أَنذِرْ قَوْمَكَ مِن قَبْلِ أَن يَأْتِيَهُمْ عَذَابٌ أَلِيمٌ"
       }
     ]
   },
+  // PAKET 3
   {
     "id": 3,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "كَلَّا إِنَّ كِتَابَ الْأَبْرَارِ لَفِي عِلِّيِّينَ وَمَا أَدْرَاكَ مَا عِلِّيُّونَ كِتَابٌ مَّرْقُومٌ",
-        "referensi": "Surat Al-Mutaffifin: 18-20",
-        "kunciLabel": "3 Ayat Surat Al-Mutaffifin (ayat 18-20):",
-        "kunciArab": "(١٨) كَلَّا إِنَّ كِتَابَ الْأَبْرَارِ لَفِي عِلِّيِّينَ ۝ (١٩) وَمَا أَدْرَاكَ مَا عِلِّيُّونَ ۝ (٢٠) كِتَابٌ مَّرْقُومٌ"
+        "surat": "Al-Mulk",
+        "ayat": 19,
+        "teks": "أَوَلَمْ يَرَوْا إِلَى الطَّيْرِ فَوْقَهُمْ صَافَّاتٍ وَيَقْبِضْنَ ۚ مَا يُمْسِكُهُنَّ ...",
+        "lanjutan": "إِلَّا الرَّحْمَٰنُ ۚ إِنَّهُ بِكُلِّ شَيْءٍ بَصِيرٌ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَإِذَا الْوُحُوشُ حُشِرَتْ وَإِذَا الْبِحَارُ سُجِّرَتْ وَإِذَا النُّفُوسُ زُوِّجَتْ",
-        "referensi": "Surat At-Takwir: 5-7",
-        "kunciLabel": "3 Ayat Surat At-Takwir (ayat 5-7):",
-        "kunciArab": "(٥) وَإِذَا الْوُحُوشُ حُشِرَتْ ۝ (٦) وَإِذَا الْبِحَارُ سُجِّرَتْ ۝ (٧) وَإِذَا النُّفُوسُ زُوِّجَتْ"
+        "surat": "Al-Qalam",
+        "ayat": 22,
+        "teks": "أَنِ اغْدُوا عَلَىٰ حَرْثِكُمْ إِن كُنتُمْ صَارِمِينَ ۝",
+        "lanjutan": "فَانطَلَقُوا وَهُمْ يَتَخَافَتُونَ ۝ أَن لَّا يَدْخُلَنَّهَا الْيَوْمَ عَلَيْكُم مِّسْكِينٌ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Inshiqaq ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Inshiqaq 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-Inshiqaq]"
+        "surat": "Al-Jinn",
+        "ayat": "1-3",
+        "perintah": "Bacakanlah ayat 1-3 dari Surat Al-Jinn"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...فَإِذَا فَرَغْتَ فَانصَبْ",
-        "kunciLabel": "Surat berikutnya: At-Tin - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat At-Tin] ۝ (٢) [Ayat 2 Surat At-Tin] ۝ (٣) [Ayat 3 Surat At-Tin] ۝ (٤) [Ayat 4 Surat At-Tin] ۝ (٥) [Ayat 5 Surat At-Tin]"
+        "surat_awal": "Al-Muzzammil",
+        "ayat_awal": 20,
+        "teks": "إِنَّ رَبَّكَ يَعْلَمُ أَنَّكَ تَقُومُ أَدْنَىٰ مِن ثُلُثَيِ اللَّيْلِ وَنِصْفَهُ وَثُلُثَهُ وَطَائِفَةٌ مِّنَ الَّذِينَ مَعَكَ ۚ وَاللَّهُ يُقَدِّرُ اللَّيْلَ وَالنَّهَارَ ۚ عَلِمَ أَن لَّن تُحْصُوهُ فَتَابَ عَلَيْكُمْ ۖ فَاقْرَءُوا مَا تَيَسَّرَ مِنَ الْقُرْآنِ ۚ عَلِمَ أَن سَيَكُونُ مِنكُم مَّرْضَىٰ ۙ وَآخَرُونَ يَضْرِبُونَ فِي الْأَرْضِ يَبْتَغُونَ مِن فَضْلِ اللَّهِ ۙ وَآخَرُونَ يُقَاتِلُونَ فِي سَبِيلِ اللَّهِ ۖ فَاقْرَءُوا مَا تَيَسَّرَ مِنْهُ ۚ وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَأَقْرِضُوا اللَّهَ قَرْضًا حَسَنًا ۚ وَمَا تُقَدِّمُوا لِأَنفُسِكُم مِّنْ خَيْرٍ تَجِدُوهُ عِندَ اللَّهِ هُوَ خَيْرًا وَأَعْظَمَ أَجْرًا ۚ وَاسْتَغْفِرُوا اللَّهَ ۖ إِنَّ اللَّهَ غَفُورٌ رَّحِيمٌ ۝",
+        "surat_lanjutan": "Al-Muddathir",
+        "ayat_lanjutan": 1,
+        "lanjutan": "يَا أَيُّهَا الْمُدَّثِّرُ ۝ قُمْ فَأَنذِرْ ۝ وَرَبَّكَ فَكَبِّرْ"
       }
     ]
   },
+  // PAKET 4
   {
     "id": 4,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَلَالْآخِرَةُ خَيْرٌ لَّكَ مِنَ الْأُولَىٰ وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ",
-        "referensi": "Surat Ad-Duha: 4-5",
-        "kunciLabel": "3 Ayat Surat Ad-Duha (ayat 4-6):",
-        "kunciArab": "(٤) وَلَالْآخِرَةُ خَيْرٌ لَّكَ مِنَ الْأُولَىٰ ۝ (٥) وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ ۝ (٦) أَلَمْ يَجِدْكَ يَتِيمًا فَآوَىٰ"
+        "surat": "Al-Qalam",
+        "ayat": 4,
+        "teks": "وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ ۝",
+        "lanjutan": "فَسَتُبْصِرُ وَيُبْصِرُونَ ۝ بِأَيِّيكُمُ الْمَفْتُونُ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "ثُمَّ جَعَلَهُ غُثَاءً أَحْوَىٰ سَنُقْرِئُكَ فَلَا تَنسَىٰ إِلَّا مَا شَاءَ اللَّهُ",
-        "referensi": "Surat Al-'Alaq: 5-7",
-        "kunciLabel": "3 Ayat Surat Al-'Alaq (ayat 5-7):",
-        "kunciArab": "(٥) ثُمَّ جَعَلَهُ غُثَاءً أَحْوَىٰ ۝ (٦) سَنُقْرِئُكَ فَلَا تَنسَىٰ ۝ (٧) إِلَّا مَا شَاءَ اللَّهُ"
+        "surat": "Al-Haqqah",
+        "ayat": 11,
+        "teks": "إِنَّا لَمَّا طَغَى الْمَاءُ حَمَلْنَاكُمْ فِي الْجَارِيَةِ ۝",
+        "lanjutan": "لِنَجْعَلَهَا لَكُمْ تَذْكِرَةً وَتَعِيَهَا أُذُنٌ وَاعِيَةٌ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Qari'ah ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Qari'ah 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-Qari'ah]"
+        "surat": "Al-Muzzammil",
+        "ayat": "1-4",
+        "perintah": "Bacakanlah ayat 1-4 dari Surat Al-Muzzammil"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...هَلْ فِي ذَٰلِكَ قَسَمٌ لِّذِي حِجْرٍ",
-        "kunciLabel": "Surat berikutnya: Al-Fajr - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Fajr] ۝ (٢) [Ayat 2 Surat Al-Fajr] ۝ (٣) [Ayat 3 Surat Al-Fajr] ۝ (٤) [Ayat 4 Surat Al-Fajr] ۝ (٥) [Ayat 5 Surat Al-Fajr]"
+        "surat_awal": "Al-Muddathir",
+        "ayat_awal": 56,
+        "teks": "وَمَا يَذْكُرُونَ إِلَّا أَن يَشَاءَ اللَّهُ ۚ هُوَ أَهْلُ التَّقْوَىٰ وَأَهْلُ الْمَغْفِرَةِ ۝",
+        "surat_lanjutan": "Al-Qiyamah",
+        "ayat_lanjutan": 1,
+        "lanjutan": "لَّا أُقْسِمُ بِيَوْمِ الْقِيَامَةِ ۝ وَلَا أُقْسِمُ بِالنَّفْسِ اللَّوَّامَةِ"
       }
     ]
   },
+  // PAKET 5
   {
     "id": 5,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَلَقَدْ زَيَّنَّا السَّمَاءَ الدُّنْيَا بِمَصَابِيحَ وَجَعَلْنَاهَا رُجُومًا لِّلشَّيَاطِينِ",
-        "referensi": "Surat Al-Mulk: 5-6",
-        "kunciLabel": "3 Ayat Surat Al-Mulk (ayat 5-7):",
-        "kunciArab": "(٥) وَلَقَدْ زَيَّنَّا السَّمَاءَ الدُّنْيَا بِمَصَابِيحَ ۝ (٦) وَجَعَلْنَاهَا رُجُومًا لِّلشَّيَاطِينِ ۝ (٧) وَأَعْتَدْنَا لَهُمْ عَذَابَ السَّعِيرِ"
+        "surat": "Al-Haqqah",
+        "ayat": 19,
+        "teks": "فَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِيَمِينِهِ فَيَقُولُ هَاؤُمُ اقْرَءُوا كِتَابِيهْ ۝",
+        "lanjutan": "إِنِّي ظَنَنتُ أَنِّي مُلَاقٍ حِسَابِيهْ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "يَا أَيُّهَا الْإِنسَانُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًا فَمُلَاقِيهِ فَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِيَمِينِهِ",
-        "referensi": "Surat Al-Inshiqaq: 6-8",
-        "kunciLabel": "3 Ayat Surat Al-Inshiqaq (ayat 6-8):",
-        "kunciArab": "(٦) يَا أَيُّهَا الْإِنسَانُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًا فَمُلَاقِيهِ ۝ (٧) فَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِيَمِينِهِ ۝ (٨) فَسَوْفَ يُحَاسَبُ حِسَابًا يَسِيرًا"
+        "surat": "Al-Ma'arij",
+        "ayat": 19,
+        "teks": "إِنَّ الْإِنسَانَ خُلِقَ هَلُوعًا ۝",
+        "lanjutan": "إِذَا مَسَّهُ الشَّرُّ جَزُوعًا ۝ وَإِذَا مَسَّهُ الْخَيْرُ مَنُوعًا"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-'Alaq ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-'Alaq 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-'Alaq]"
+        "surat": "Al-Muddathir",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat Al-Muddathir"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...إِنَّ هَٰذَا لَرِزْقٌ لَّنَا",
-        "kunciLabel": "Surat berikutnya: Al-Mursalat - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Mursalat] ۝ (٢) [Ayat 2 Surat Al-Mursalat] ۝ (٣) [Ayat 3 Surat Al-Mursalat] ۝ (٤) [Ayat 4 Surat Al-Mursalat] ۝ (٥) [Ayat 5 Surat Al-Mursalat]"
+        "surat_awal": "Al-Qiyamah",
+        "ayat_awal": 40,
+        "teks": "أَلَيْسَ ذَٰلِكَ بِقَادِرٍ عَلَىٰ أَن يُحْيِيَ الْمَوْتَىٰ ۝",
+        "surat_lanjutan": "Al-Insan",
+        "ayat_lanjutan": 1,
+        "lanjutan": "هَلْ أَتَىٰ عَلَى الْإِنسَانِ حِينٌ مِّنَ الدَّهْرِ لَمْ يَكُن شَيْئًا مَّذْكُورًا"
       }
     ]
   },
+  // PAKET 6
   {
     "id": 6,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ حُنَفَاءَ وَيُقِيمُوا الصَّلَاةَ وَيُؤْتُوا الزَّكَاةَ",
-        "referensi": "Surat Al-Bayyinah: 5-6",
-        "kunciLabel": "3 Ayat Surat Al-Bayyinah (ayat 5-7):",
-        "kunciArab": "(٥) وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ ۝ (٦) حُنَفَاءَ وَيُقِيمُوا الصَّلَاةَ وَيُؤْتُوا الزَّكَاةَ ۝ (٧) وَذَٰلِكَ دِينُ الْقَيِّمَةِ"
+        "surat": "Nuh",
+        "ayat": 10,
+        "teks": "فَقُلْتُ اسْتَغْفِرُوا رَبَّكُمْ إِنَّهُ كَانَ غَفَّارًا ۝",
+        "lanjutan": "يُرْسِلِ السَّمَاءَ عَلَيْكُم مِّدْرَارًا"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "قُتِلَ أَصْحَابُ الْأُخْدُودِ النَّارِ ذَاتِ الْوَقُودِ إِذْ هُمْ عَلَيْهَا قُعُودٌ",
-        "referensi": "Surat Al-Buruj: 4-6",
-        "kunciLabel": "3 Ayat Surat Al-Buruj (ayat 4-6):",
-        "kunciArab": "(٤) قُتِلَ أَصْحَابُ الْأُخْدُودِ ۝ (٥) النَّارِ ذَاتِ الْوَقُودِ ۝ (٦) إِذْ هُمْ عَلَيْهَا قُعُودٌ"
+        "surat": "Al-Jinn",
+        "ayat": 11,
+        "teks": "وَأَنَّا مِنَّا الصَّالِحُونَ وَمِنَّا دُونَ ذَٰلِكَ ۖ كُنَّا طَرَائِقَ قِدَدًا ۝",
+        "lanjutan": "وَأَنَّا ظَنَنَّا أَن لَّن نُّعْجِزَ اللَّهَ فِي الْأَرْضِ وَلَن نُّعْجِزَهُ هَرَبًا"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat An-Nasr ayat 1-3",
-        "rentangAyat": "Ayat 1-3",
-        "kunciLabel": "3 Ayat lengkap (Surat An-Nasr 1-3):",
-        "kunciArab": "[Ayat 1-3 Surat An-Nasr]"
+        "surat": "Al-Qiyamah",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat Al-Qiyamah"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍ لَّخَبِيرٌ",
-        "kunciLabel": "Surat berikutnya: Al-Qari'ah - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Qari'ah] ۝ (٢) [Ayat 2 Surat Al-Qari'ah] ۝ (٣) [Ayat 3 Surat Al-Qari'ah] ۝ (٤) [Ayat 4 Surat Al-Qari'ah] ۝ (٥) [Ayat 5 Surat Al-Qari'ah]"
+        "surat_awal": "Al-Insan",
+        "ayat_awal": 31,
+        "teks": "يُدْخِلُ مَن يَشَاءُ فِي رَحْمَتِهِ ۚ وَالظَّالِمِينَ أَعَدَّ لَهُمْ عَذَابًا أَلِيمًا ۝",
+        "surat_lanjutan": "Al-Mursalat",
+        "ayat_lanjutan": 1,
+        "lanjutan": "وَالْمُرْسَلَاتِ عُرْفًا ۝ فَالْعَاصِفَاتِ عَصْفًا ۝ وَالنَّاشِرَاتِ نَشْرًا"
       }
     ]
   },
+  // PAKET 7
   {
     "id": 7,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "إِنَّ فِي ذَٰلِكَ لَعِبْرَةً لِّمَن يَخْشَىٰ كَذَّبَتْ ثَمُودُ وَعَادٌ بِالْقَارِعَةِ",
-        "referensi": "Surat Al-Haqqah: 4-6",
-        "kunciLabel": "3 Ayat Surat Al-Haqqah (ayat 4-6):",
-        "kunciArab": "(٤) كَذَّبَتْ ثَمُودُ وَعَادٌ بِالْقَارِعَةِ ۝ (٥) فَأَمَّا ثَمُودُ فَأُهْلِكُوا بِالطَّاغِيَةِ ۝ (٦) وَأَمَّا عَادٌ فَأُهْلِكُوا بِرِيحٍ صَرْصَرٍ عَاتِيَةٍ"
+        "surat": "Al-Muzzammil",
+        "ayat": 8,
+        "teks": "وَاذْكُرِ اسْمَ رَبِّكَ وَتَبَتَّلْ إِلَيْهِ تَبْتِيلًا ۝",
+        "lanjutan": "رَّبُّ الْمَشْرِقِ وَالْمَغْرِبِ لَا إِلَٰهَ إِلَّا هُوَ فَاتَّخِذْهُ وَكِيلًا"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "إِذَا الشَّمْسُ كُوِّرَتْ وَإِذَا النُّجُومُ انكَدَرَتْ وَإِذَا الْجِبَالُ سُيِّرَتْ",
-        "referensi": "Surat At-Takwir: 1-3",
-        "kunciLabel": "3 Ayat awal Surat At-Takwir (1-3):",
-        "kunciArab": "(١) إِذَا الشَّمْسُ كُوِّرَتْ ۝ (٢) وَإِذَا النُّجُومُ انكَدَرَتْ ۝ (٣) وَإِذَا الْجِبَالُ سُيِّرَتْ"
+        "surat": "Al-Muddathir",
+        "ayat": 17,
+        "teks": "سَأُرْهِقُهُ صَعُودًا ۝ إِنَّهُ فَكَّرَ وَقَدَّرَ ۝ فَقُتِلَ كَيْفَ قَدَّرَ ۝ ...",
+        "lanjutan": "ثُمَّ قُتِلَ كَيْفَ قَدَّرَ ۝ ثُمَّ نَظَرَ ۝ ثُمَّ عَبَسَ وَبَسَرَ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat At-Tin ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat At-Tin 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat At-Tin]"
+        "surat": "Al-Insan",
+        "ayat": "1-6",
+        "perintah": "Bacakanlah ayat 1-6 dari Surat Al-Insan"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...ثُمَّ كَلَّا سَيَعْلَمُونَ",
-        "kunciLabel": "Surat berikutnya: Al-Ma'arij - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Ma'arij] ۝ (٢) [Ayat 2 Surat Al-Ma'arij] ۝ (٣) [Ayat 3 Surat Al-Ma'arij] ۝ (٤) [Ayat 4 Surat Al-Ma'arij] ۝ (٥) [Ayat 5 Surat Al-Ma'arij]"
+        "surat_awal": "An-Naba",
+        "ayat_awal": 40,
+        "teks": "إِنَّا أَنذَرْنَاكُمْ عَذَابًا قَرِيبًا يَوْمَ يَنظُرُ الْمَرْءُ مَا قَدَّمَتْ يَدَاهُ وَيَقُولُ الْكَافِرُ يَا لَيْتَنِي كُنتُ تُرَابًا ۝",
+        "surat_lanjutan": "An-Nazi'at",
+        "ayat_lanjutan": 1,
+        "lanjutan": "وَالنَّازِعَاتِ غَرْقًا ۝ وَالنَّاشِطَاتِ نَشْطًا"
       }
     ]
   },
+  // PAKET 8
   {
     "id": 8,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "أَلَمْ نَجْعَلِ الْأَرْضَ كِفَاتًا أَحْيَاءً وَأَمْوَاتًا وَجَعَلْنَا فِيهَا رَوَاسِيَ شَامِخَاتٍ",
-        "referensi": "Surat Al-Mursalat: 25-27",
-        "kunciLabel": "3 Ayat Surat Al-Mursalat (ayat 25-27):",
-        "kunciArab": "(٢٥) أَلَمْ نَجْعَلِ الْأَرْضَ كِفَاتًا ۝ (٢٦) أَحْيَاءً وَأَمْوَاتًا ۝ (٢٧) وَجَعَلْنَا فِيهَا رَوَاسِيَ شَامِخَاتٍ"
+        "surat": "Al-Qiyamah",
+        "ayat": 13,
+        "teks": "إِذَا رُدَّتِ الْأَرْضُ رَدًّا ۝",
+        "lanjutan": "وَأَذِّن فِي النَّاسِ بِالْحَجِّ يَأْتُوكَ رِجَالًا وَعَلَىٰ كُلِّ ضَامِرٍ يَأْتِينَ مِن كُلِّ فَجٍّ عَمِيقٍ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَإِنَّ لَكَ لَأَجْرًا غَيْرَ مَمْنُونٍ وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ فَسَتُبْصِرُ وَيُبْصِرُونَ",
-        "referensi": "Surat Al-Qalam: 3-5",
-        "kunciLabel": "3 Ayat Surat Al-Qalam (ayat 3-5):",
-        "kunciArab": "(٣) وَإِنَّ لَكَ لَأَجْرًا غَيْرَ مَمْنُونٍ ۝ (٤) وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ ۝ (٥) فَسَتُبْصِرُ وَيُبْصِرُونَ"
+        "surat": "Al-Insan",
+        "ayat": 23,
+        "teks": "إِنَّا نَحْنُ نَزَّلْنَا عَلَيْكَ الْقُرْآنَ تَنزِيلًا ۝",
+        "lanjutan": "فَاصْبِرْ لِحُكْمِ رَبِّكَ وَلَا تُطِعْ مِنْهُمْ آثِمًا أَوْ كَفُورًا"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Az-Zalzalah ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Az-Zalzalah 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Az-Zalzalah]"
+        "surat": "An-Naba",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat An-Naba"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ",
-        "kunciLabel": "Surat berikutnya: Al-'Adiyat - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-'Adiyat] ۝ (٢) [Ayat 2 Surat Al-'Adiyat] ۝ (٣) [Ayat 3 Surat Al-'Adiyat] ۝ (٤) [Ayat 4 Surat Al-'Adiyat] ۝ (٥) [Ayat 5 Surat Al-'Adiyat]"
+        "surat_awal": "An-Nazi'at",
+        "ayat_awal": 46,
+        "teks": "يَوْمَ يَرَوْنَهَا تَطُوفُ عَلَيْهِمْ كَأَنَّهُمْ إِلَىٰ ظِلٍّ مُّقَرِّنِينَ ۝",
+        "surat_lanjutan": "Abasa",
+        "ayat_lanjutan": 1,
+        "lanjutan": "عَبَسَ وَتَوَلَّىٰ ۝ أَن جَاءَهُ الْأَعْمَىٰ"
       }
     ]
   },
+  // PAKET 9
   {
     "id": 9,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "فَذَرْنِي وَمَن يُكَذِّبُ بِهَٰذَا الْحَدِيثِ سَنَسْتَدْرِجُهُم مِّنْ حَيْثُ لَا يَعْلَمُونَ وَأُمْلِي لَهُمْ",
-        "referensi": "Surat Al-Qalam: 44-46",
-        "kunciLabel": "3 Ayat Surat Al-Qalam (ayat 44-46):",
-        "kunciArab": "(٤٤) فَذَرْنِي وَمَن يُكَذِّبُ بِهَٰذَا الْحَدِيثِ ۝ (٤٥) سَنَسْتَدْرِجُهُم مِّنْ حَيْثُ لَا يَعْلَمُونَ ۝ (٤٦) وَأُمْلِي لَهُمْ"
+        "surat": "Al-Mursalat",
+        "ayat": 8,
+        "teks": "فَإِذَا النُّجُومُ طُمِسَتْ ۝ وَإِذَا السَّمَاءُ فُرِجَتْ ۝ وَإِذَا الْجِبَالُ نُسِفَتْ ۝ ...",
+        "lanjutan": "وَإِذَا الرُّسُلُ أُقِّتَتْ ۝ لِأَيِّ يَوْمٍ أُجِّلَتْ ۝ لِيَوْمِ الْفَصْلِ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "فِي جَنَّاتٍ يَتَسَاءَلُونَ عَنِ الْمُجْرِمِينَ مَا سَلَكَكُمْ فِي سَقَرَ",
-        "referensi": "Surat Al-Muddassir: 40-42",
-        "kunciLabel": "3 Ayat Surat Al-Muddassir (ayat 40-42):",
-        "kunciArab": "(٤٠) فِي جَنَّاتٍ يَتَسَاءَلُونَ ۝ (٤١) عَنِ الْمُجْرِمِينَ ۝ (٤٢) مَا سَلَكَكُمْ فِي سَقَرَ"
+        "surat": "An-Naba",
+        "ayat": 14,
+        "teks": "وَأَنزَلْنَا مِنَ الْمُعْصِرَاتِ مَاءً ثَجَّاجًا ۝",
+        "lanjutan": "لِّنُخْرِجَ بِهِ حَبًّا وَنَبَاتًا ۝ وَجَنَّاتٍ أَلْفَافًا"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Ghashiyah ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Ghashiyah 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-Ghashiyah]"
+        "surat": "An-Nazi'at",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat An-Nazi'at"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ",
-        "kunciLabel": "Surat berikutnya: Az-Zalzalah - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Az-Zalzalah] ۝ (٢) [Ayat 2 Surat Az-Zalzalah] ۝ (٣) [Ayat 3 Surat Az-Zalzalah] ۝ (٤) [Ayat 4 Surat Az-Zalzalah] ۝ (٥) [Ayat 5 Surat Az-Zalzalah]"
+        "surat_awal": "Abasa",
+        "ayat_awal": 42,
+        "teks": "يَوْمَ يَتَخَلَّىٰ عَنْهُمْ وَلَا يَأْتِيهِمْ أَسَفًا عَمَّا فَعَلُوا بِالْمُؤْمِنِينَ ۝ وَلَقَدْ آتَيْنَاكُمْ سَبْعًا مِّنَ الْمَثَانِي وَالْقُرْآنَ الْعَظِيمَ ۝ لَا تَمُدُّنَّ عَيْنَيْكَ إِلَىٰ مَا مَتَّعْنَا بِهِ أَزْوَاجًا مِّنْهُمْ وَلَا تَحْزَنْ عَلَيْهِمْ وَاخْفِضْ جَنَاحَكَ لِلْمُؤْمِنِينَ ۝ وَقُلْ إِنِّي أَنَا النَّذِيرُ الْمُبِينُ ۝ كَمَا أَنزَلْنَا عَلَى الْمُقْتَسِمِينَ ۝ الَّذِينَ جَعَلُوا الْقُرْآنَ عِضِينَ ۝ فَوَرَبِّكَ لَنَسْأَلَنَّهُمْ أَجْمَعِينَ ۝ عَمَّا كَانُوا يَفْعَلُونَ ۝ فَاصْدَعْ بِمَا تُؤْمَرُ وَأَعْرِضْ عَنِ الْمُشْرِكِينَ ۝ إِنَّا كَفَيْنَاكَ الْمُسْتَهْزِئِينَ ۝ الَّذِينَ يَجْعَلُونَ مَعَ اللَّهِ إِلَٰهًا آخَرَ ۚ فَسَوْفَ يَعْلَمُونَ ۝ وَلَقَدْ نَعْلَمُ أَنَّكَ يَضِيقُ صَدْرُكَ بِمَا يَقُولُونَ ۝ فَسَبِّحْ بِحَمْدِ رَبِّكَ وَكُن مِّنَ السَّاجِدِينَ ۝ وَاعْبُدْ رَبَّكَ حَتَّىٰ يَأْتِيَكَ الْيَقِينُ ۝",
+        "surat_lanjutan": "At-Takwir",
+        "ayat_lanjutan": 1,
+        "lanjutan": "إِذَا الشَّمْسُ كُوِّرَتْ ۝ وَإِذَا النُّجُومُ انكَدَرَتْ"
       }
     ]
   },
+  // PAKET 10
   {
     "id": 10,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ فَمَا لَكَ كَيْفَ تَحْكُمُ أَمْ تَأْتِيهِم بِجُنَّةٍ",
-        "referensi": "Surat Al-Qalam: 30-32",
-        "kunciLabel": "3 Ayat Surat Al-Qalam (ayat 30-32):",
-        "kunciArab": "(٣٠) إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ ۝ (٣١) فَمَا لَكَ كَيْفَ تَحْكُمُ ۝ (٣٢) أَمْ تَأْتِيهِم بِجُنَّةٍ"
+        "surat": "An-Nazi'at",
+        "ayat": 15,
+        "teks": "هَلْ أَتَاكَ حَدِيثُ مُوسَىٰ ۝ إِذْ نَادَاهُ رَبُّهُ بِالْوَادِ الْمُقَدَّسِ طُوًى ۝",
+        "lanjutan": "اذْهَبْ إِلَىٰ فِرْعَوْنَ إِنَّهُ طَغَىٰ ۝ فَقُلْ هَل لَّكَ إِلَىٰ أَن تَزَكَّىٰ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "كَلَّا إِنَّ كِتَابَ الْفُجَّارِ لَفِي سِجِّينٍ وَمَا أَدْرَاكَ مَا سِجِّينٌ كِتَابٌ مَّرْقُومٌ",
-        "referensi": "Surat Al-Mutaffifin: 7-9",
-        "kunciLabel": "3 Ayat Surat Al-Mutaffifin (ayat 7-9):",
-        "kunciArab": "(٧) كَلَّا إِنَّ كِتَابَ الْفُجَّارِ لَفِي سِجِّينٍ ۝ (٨) وَمَا أَدْرَاكَ مَا سِجِّينٌ ۝ (٩) كِتَابٌ مَّرْقُومٌ"
+        "surat": "Abasa",
+        "ayat": 24,
+        "teks": "فَلْيَنظُرِ الْإِنسَانُ إِلَىٰ طَعَامِهِ ۝ أَنَّا صَبَبْنَا الْمَاءَ صَبًّا ۝",
+        "lanjutan": "ثُمَّ شَقَقْنَا الْأَرْضَ شَقًّا ۝ فَأَنبَتْنَا فِيهَا حَبًّا ۝ وَعِنَبًا وَقَضْبًا"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Infitar ayat 6-10",
-        "rentangAyat": "Ayat 6-10",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Infitar 6-10):",
-        "kunciArab": "[Ayat 6-10 Surat Al-Infitar]"
+        "surat": "At-Takwir",
+        "ayat": "1-6",
+        "perintah": "Bacakanlah ayat 1-6 dari Surat At-Takwir"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...وَإِنَّ لَكَ لَأَجْرًا غَيْرَ مَمْنُونٍ",
-        "kunciLabel": "Surat berikutnya: Al-Haqqah - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Haqqah] ۝ (٢) [Ayat 2 Surat Al-Haqqah] ۝ (٣) [Ayat 3 Surat Al-Haqqah] ۝ (٤) [Ayat 4 Surat Al-Haqqah] ۝ (٥) [Ayat 5 Surat Al-Haqqah]"
+        "surat_awal": "Al-Infitar",
+        "ayat_awal": 19,
+        "teks": "يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْئًا ۖ وَالْأَمْرُ يَوْمَئِذٍ لِّلَّهِ ۝",
+        "surat_lanjutan": "Al-Mutaffifin",
+        "ayat_lanjutan": 1,
+        "lanjutan": "وَيْلٌ لِّلْمُطَفِّفِينَ ۝ الَّذِينَ إِذَا اكْتَالُوا عَلَى النَّاسِ يَسْتَوْفُونَ"
       }
     ]
   },
+  // PAKET 11
   {
     "id": 11,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "مَا لَهُم مِّنَ اللَّهِ مِنْ عَاصِمٍ كَأَنَّهُمْ حُمُرٌ مُّسْتَنفِرَةٌ فَرَّتْ مِن قَسْوَرَةٍ",
-        "referensi": "Surat Al-Muddassir: 50-52",
-        "kunciLabel": "3 Ayat Surat Al-Muddassir (ayat 50-52):",
-        "kunciArab": "(٥٠) مَا لَهُم مِّنَ اللَّهِ مِنْ عَاصِمٍ ۝ (٥١) كَأَنَّهُمْ حُمُرٌ مُّسْتَنفِرَةٌ ۝ (٥٢) فَرَّتْ مِن قَسْوَرَةٍ"
+        "surat": "At-Takwir",
+        "ayat": 15,
+        "teks": "فَلَا أُقْسِمُ بِالْخُنَّسِ ۝ الْجَوَارِ الْكُنَّسِ ۝",
+        "lanjutan": "وَاللَّيْلِ إِذَا عَسْعَسَ ۝ وَالصُّبْحِ إِذَا تَنَفَّسَ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "أَلَمْ نَجْعَلِ الْأَرْضَ مِهَادًا وَالْجِبَالَ أَوْتَادًا وَخَلَقْنَاكُمْ أَزْوَاجًا",
-        "referensi": "Surat An-Naba': 6-8",
-        "kunciLabel": "3 Ayat Surat An-Naba' (ayat 6-8):",
-        "kunciArab": "(٦) أَلَمْ نَجْعَلِ الْأَرْضَ مِهَادًا ۝ (٧) وَالْجِبَالَ أَوْتَادًا ۝ (٨) وَخَلَقْنَاكُمْ أَزْوَاجًا"
+        "surat": "Al-Infitar",
+        "ayat": 6,
+        "teks": "يَا أَيُّهَا الْإِنسَانُ مَا غَرَّكَ بِرَبِّكَ الْكَرِيمِ ۝",
+        "lanjutan": "الَّذِي خَلَقَكَ فَسَوَّاكَ فَعَدَلَكَ ۝ فِي أَيِّ صُورَةٍ مَّا شَاءَ رَكَّبَكَ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-A'la ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-A'la 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-A'la]"
+        "surat": "Al-Mutaffifin",
+        "ayat": "1-6",
+        "perintah": "Bacakanlah ayat 1-6 dari Surat Al-Mutaffifin"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...فَذَكِّرْ إِن نَّفَعَتِ الذِّكْرَىٰ",
-        "kunciLabel": "Surat berikutnya: Al-Ghashiyah - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Ghashiyah] ۝ (٢) [Ayat 2 Surat Al-Ghashiyah] ۝ (٣) [Ayat 3 Surat Al-Ghashiyah] ۝ (٤) [Ayat 4 Surat Al-Ghashiyah] ۝ (٥) [Ayat 5 Surat Al-Ghashiyah]"
+        "surat_awal": "Al-Inshiqaq",
+        "ayat_awal": 25,
+        "teks": "إِلَّا مَن تَابَ وَآمَنَ وَعَمِلَ عَمَلًا صَالِحًا فَأُولَٰئِكَ يُدْخِلُ اللَّهُ جَنَّاتِ النَّعِيمِ ۚ أَبَدًا يُدْخِلُهُمْ وَعَدَ اللَّهُ حَقًّا ۚ وَهُوَ الْعَزِيزُ الْحَكِيمُ ۝",
+        "surat_lanjutan": "Al-Buruj",
+        "ayat_lanjutan": 1,
+        "lanjutan": "وَالسَّمَاءِ ذَاتِ الْبُرُوجِ ۝ وَالْيَوْمِ الْمَوْعُودِ ۝ وَشَاهِدٍ وَمَشْهُودٍ"
       }
     ]
   },
+  // PAKET 12
   {
     "id": 12,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "فَسَوْفَ يُحَاسَبُ حِسَابًا يَسِيرًا وَيَنقَلِبُ إِلَىٰ أَهْلِهِ مَسْرُورًا وَأَمَّا مَنْ أُوتِيَ كِتَابَهُ",
-        "referensi": "Surat Al-Inshiqaq: 8-10",
-        "kunciLabel": "3 Ayat Surat Al-Inshiqaq (ayat 8-10):",
-        "kunciArab": "(٨) فَسَوْفَ يُحَاسَبُ حِسَابًا يَسِيرًا ۝ (٩) وَيَنقَلِبُ إِلَىٰ أَهْلِهِ مَسْرُورًا ۝ (١٠) وَأَمَّا مَنْ أُوتِيَ كِتَابَهُ وَرَاءَ ظَهْرِهِ"
+        "surat": "Al-Mutaffifin",
+        "ayat": 7,
+        "teks": "لَا يَحْسَبَنَّ الَّذِينَ كَفَرُوا أَنَّمَا نُمْلِي لَهُمْ خَيْرٌ لِّأَنفُسِهِمْ ۚ إِنَّمَا نُمْلِي لَهُمْ لِيَزْدَادُوا إِثْمًا ۚ ...",
+        "lanjutan": "وَلَهُمْ عَذَابٌ مُّهِينٌ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "فَسَيَذْكُرُ مَا يُرَىٰ أَوْفَىٰ لَكَ فَأَوْفَىٰ وَإِنَّ ذَٰلِكَ لَفِي صُحُفِ الْأُولَىٰ",
-        "referensi": "Surat An-Nazi'at: 35-37",
-        "kunciLabel": "3 Ayat Surat An-Nazi'at (ayat 35-37):",
-        "kunciArab": "(٣٥) فَسَيَذْكُرُ مَا يُرَىٰ ۝ (٣٦) أَوْفَىٰ لَكَ فَأَوْفَىٰ ۝ (٣٧) وَإِنَّ ذَٰلِكَ لَفِي صُحُفِ الْأُولَىٰ"
+        "surat": "Al-Inshiqaq",
+        "ayat": 6,
+        "teks": "يَا أَيُّهَا الْإِنسَانُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًا فَمُلَاقِيهِ ۝",
+        "lanjutan": "فَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِيَمِينِهِ ۝ فَسَوْفَ يُحَاسَبُ حِسَابًا يَسِيرًا"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Haqqah ayat 19-23",
-        "rentangAyat": "Ayat 19-23",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Haqqah 19-23):",
-        "kunciArab": "[Ayat 19-23 Surat Al-Haqqah]"
+        "surat": "Al-Buruj",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat Al-Buruj"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...وَصَدَقَتِ الْمُصَدِّقُونَ",
-        "kunciLabel": "Surat berikutnya: Ad-Duha - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Ad-Duha] ۝ (٢) [Ayat 2 Surat Ad-Duha] ۝ (٣) [Ayat 3 Surat Ad-Duha] ۝ (٤) [Ayat 4 Surat Ad-Duha] ۝ (٥) [Ayat 5 Surat Ad-Duha]"
+        "surat_awal": "At-Tariq",
+        "ayat_awal": 17,
+        "teks": "فَمَهِّلِ الْكَافِرِينَ أَمْهِلْهُمْ رُوَيْدًا ۝",
+        "surat_lanjutan": "Al-A'la",
+        "ayat_lanjutan": 1,
+        "lanjutan": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى ۝ الَّذِي خَلَقَ فَسَوَّىٰ"
       }
     ]
   },
+  // PAKET 13
   {
     "id": 13,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَاللَّيْلِ إِذَا يَغْشَىٰ وَالنَّهَارِ إِذَا تَجَلَّىٰ وَمَا خَلَقَ الذَّكَرَ وَالْأُنثَىٰ",
-        "referensi": "Surat Al-Lail: 1-3",
-        "kunciLabel": "3 Ayat awal Surat Al-Lail (1-3):",
-        "kunciArab": "(١) وَاللَّيْلِ إِذَا يَغْشَىٰ ۝ (٢) وَالنَّهَارِ إِذَا تَجَلَّىٰ ۝ (٣) وَمَا خَلَقَ الذَّكَرَ وَالْأُنثَىٰ"
+        "surat": "Al-Buruj",
+        "ayat": 11,
+        "teks": "إِنَّ الَّذِينَ فَتَنُوا الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ ثُمَّ لَمْ يَتُوبُوا فَلَهُمْ عَذَابُ جَهَنَّمَ وَلَهُمْ عَذَابُ الْحَرِيقِ ۝",
+        "lanjutan": "إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ جَنَّاتٌ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ ۚ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "فَلْيَنظُرِ الْإِنسَانُ إِلَىٰ طَعَامِهِ أَنَّا صَبَبْنَا الْمَاءَ صَبًّا ثُمَّ شَقَقْنَا الْأَرْضَ شَقًّا",
-        "referensi": "Surat 'Abasa: 24-26",
-        "kunciLabel": "3 Ayat Surat 'Abasa (ayat 24-26):",
-        "kunciArab": "(٢٤) فَلْيَنظُرِ الْإِنسَانُ إِلَىٰ طَعَامِهِ ۝ (٢٥) أَنَّا صَبَبْنَا الْمَاءَ صَبًّا ۝ (٢٦) ثُمَّ شَقَقْنَا الْأَرْضَ شَقًّا"
+        "surat": "At-Tariq",
+        "ayat": 1,
+        "teks": "وَالسَّمَاءِ وَالطَّارِقِ ۝ وَمَا أَدْرَاكَ مَا الطَّارِقُ ۝",
+        "lanjutan": "النَّجْمُ الثَّاقِبُ ۝ إِن كُلُّ نَفْسٍ لَّمَّا عَلَيْهَا حَافِظٌ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-'Adiyat ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-'Adiyat 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-'Adiyat]"
+        "surat": "Al-A'la",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat Al-A'la"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...فَسَيُنزِلُ اللَّهُ عَزَابًا مِّنَ السَّمَاءِ",
-        "kunciLabel": "Surat berikutnya: At-Takwir - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat At-Takwir] ۝ (٢) [Ayat 2 Surat At-Takwir] ۝ (٣) [Ayat 3 Surat At-Takwir] ۝ (٤) [Ayat 4 Surat At-Takwir] ۝ (٥) [Ayat 5 Surat At-Takwir]"
+        "surat_awal": "Al-Ghashiyah",
+        "ayat_awal": 26,
+        "teks": "فَيُعَذِّبُهُ اللَّهُ الْعَذَابَ الْأَكْبَرَ ۝ إِنَّ إِلَيْنَا إِيَابَهُمْ ۝ ثُمَّ إِنَّ عَلَيْنَا حِسَابَهُمْ ۝",
+        "surat_lanjutan": "Al-Fajr",
+        "ayat_lanjutan": 1,
+        "lanjutan": "وَالْفَجْرِ ۝ وَلَيَالٍ عَشْرٍ"
       }
     ]
   },
+  // PAKET 14
   {
     "id": 14,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَمَا يُدْرِيكَ لَعَلَّهُ يَزَّكَّىٰ أَوْ يَذَّكَّرُ فَتَنفَعَهُ الذِّكْرَىٰ أَمَّا مَنِ اسْتَغْنَىٰ",
-        "referensi": "Surat 'Abasa: 3-5",
-        "kunciLabel": "3 Ayat Surat 'Abasa (ayat 3-5):",
-        "kunciArab": "(٣) وَمَا يُدْرِيكَ لَعَلَّهُ يَزَّكَّىٰ ۝ (٤) أَوْ يَذَّكَّرُ فَتَنفَعَهُ الذِّكْرَىٰ ۝ (٥) أَمَّا مَنِ اسْتَغْنَىٰ"
+        "surat": "Al-A'la",
+        "ayat": 14,
+        "teks": "وَلَقَدْ فَتَّنَّا الَّذِينَ مِن قَبْلِهِمْ ۖ فَلَيَعْلَمَنَّ اللَّهُ الَّذِينَ صَدَقُوا وَلَيَعْلَمَنَّ الْكَاذِبِينَ ۝",
+        "lanjutan": "أَمْ حَسِبَ الَّذِينَ يَعْمَلُونَ السَّيِّئَاتِ أَن يَسْبِقُونَا ۚ سَاءَ مَا يَحْكُمُونَ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "أَفَمَنْ هُوَ مُؤْمِنٌ كَمَنْ هُوَ فَاسِقٌ لَّا يَسْتَوُونَ أَمَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ فَلَهُمْ",
-        "referensi": "Surat As-Sajdah: 18-20",
-        "kunciLabel": "3 Ayat Surat As-Sajdah (ayat 18-20):",
-        "kunciArab": "(١٨) أَفَمَنْ هُوَ مُؤْمِنٌ كَمَنْ هُوَ فَاسِقٌ ۝ (١٩) لَّا يَسْتَوُونَ ۝ (٢٠) أَمَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ فَلَهُمْ جَنَّاتُ الْمَأْوَىٰ"
+        "surat": "Al-Ghashiyah",
+        "ayat": 17,
+        "teks": "أَفَلَا يَنظُرُونَ إِلَى الْإِبِلِ كَيْفَ خُلِقَتْ ۝",
+        "lanjutan": "وَإِلَى السَّمَاءِ كَيْفَ رُفِعَتْ ۝ وَإِلَى الْجِبَالِ كَيْفَ نُصِبَتْ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat An-Nas ayat 1-6",
-        "rentangAyat": "Ayat 1-6",
-        "kunciLabel": "6 Ayat lengkap (Surat An-Nas 1-6):",
-        "kunciArab": "[Ayat 1-6 Surat An-Nas]"
+        "surat": "Al-Fajr",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat Al-Fajr"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...إِنَّ فِي ذَٰلِكَ لَذِكْرَىٰ لِمَن كَانَ لَهُ قَلْبٌ",
-        "kunciLabel": "Surat berikutnya: Al-Muddassir - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Muddassir] ۝ (٢) [Ayat 2 Surat Al-Muddassir] ۝ (٣) [Ayat 3 Surat Al-Muddassir] ۝ (٤) [Ayat 4 Surat Al-Muddassir] ۝ (٥) [Ayat 5 Surat Al-Muddassir]"
+        "surat_awal": "Al-Balad",
+        "ayat_awal": 20,
+        "teks": "أُولَٰئِكَ أَصْحَابُ الْمَيْمَنَةِ ۝ وَالَّذِينَ كَفَرُوا بِآيَاتِنَا هُمْ أَصْحَابُ الْمَشْأَمَةِ ۝ عَلَيْهِمْ نَارٌ مُّؤْصَدَةٌ ۝",
+        "surat_lanjutan": "Ash-Shams",
+        "ayat_lanjutan": 1,
+        "lanjutan": "وَالشَّمْسِ وَضُحَاهَا ۝ وَالْقَمَرِ إِذَا تَلَاهَا"
       }
     ]
   },
+  // PAKET 15
   {
     "id": 15,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "إِنَّهَا لَإِحْدَى الْكُبَرِ نَذِيرًا لِّلْبَشَرِ لِمَن شَاءَ مِنكُمْ أَن يَتَقَدَّمَ أَوْ يَتَأَخَّرَ",
-        "referensi": "Surat Al-Muddassir: 35-37",
-        "kunciLabel": "3 Ayat Surat Al-Muddassir (ayat 35-37):",
-        "kunciArab": "(٣٥) إِنَّهَا لَإِحْدَى الْكُبَرِ ۝ (٣٦) نَذِيرًا لِّلْبَشَرِ ۝ (٣٧) لِمَن شَاءَ مِنكُمْ أَن يَتَقَدَّمَ أَوْ يَتَأَخَّرَ"
+        "surat": "Al-Fajr",
+        "ayat": 15,
+        "teks": "فَأَمَّا الْإِنسَانُ إِذَا مَا ابْتَلَاهُ رَبُّهُ فَأَكْرَمَهُ وَنَعَّمَهُ ...",
+        "lanjutan": "فَيَقُولُ رَبِّي أَكْرَمَنِ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "إِذَا السَّمَاءُ انشَقَّتْ وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ وَإِذَا الْأَرْضُ مُدَّتْ وَأَلْقَتْ مَا فِيهَا",
-        "referensi": "Surat Al-Inshiqaq: 1-4",
-        "kunciLabel": "3 Ayat Surat Al-Inshiqaq (ayat 1-3):",
-        "kunciArab": "(١) إِذَا السَّمَاءُ انشَقَّتْ ۝ (٢) وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ ۝ (٣) وَإِذَا الْأَرْضُ مُدَّتْ"
+        "surat": "Al-Balad",
+        "ayat": 10,
+        "teks": "وَهَدَيْنَاهُ النَّجْدَيْنِ ۝ فَلَا اقْتَحَمَ الْعَقَبَةَ ۝",
+        "lanjutan": "وَمَا أَدْرَاكَ مَا الْعَقَبَةُ ۝ فَكُّ رَقَبَةٍ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Ad-Duha ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Ad-Duha 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Ad-Duha]"
+        "surat": "Ash-Shams",
+        "ayat": "1-7",
+        "perintah": "Bacakanlah ayat 1-7 dari Surat Ash-Shams"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...أَلَيْسَ اللَّهُ بِأَحْكَمِ الْحَاكِمِينَ",
-        "kunciLabel": "Surat berikutnya: Al-'Alaq - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-'Alaq] ۝ (٢) [Ayat 2 Surat Al-'Alaq] ۝ (٣) [Ayat 3 Surat Al-'Alaq] ۝ (٤) [Ayat 4 Surat Al-'Alaq] ۝ (٥) [Ayat 5 Surat Al-'Alaq]"
+        "surat_awal": "Al-Lail",
+        "ayat_awal": 21,
+        "teks": "وَإِن يُكَذِّبُوكَ فَقُل لِّي عَمَلِي وَلَكُمْ عَمَلُكُمْ ۖ أَنتُم بَرِيئُونَ مِمَّا أَعْمَلُ وَأَنَا بَرِيءٌ مِّمَّا تَعْمَلُونَ ۝ وَمِنْهُم مَّن يَسْتَمِعُونَ إِلَيْكَ ۚ أَفَأَنتَ تُسْمِعُ الصُّمَّ وَلَوْ كَانُوا لَا يَعْقِلُونَ ۝ وَمِنْهُم مَّن يَنظُرُ إِلَيْكَ ۚ أَفَأَنتَ تَهْدِي الْعُمْيَ وَلَوْ كَانُوا لَا يُبْصِرُونَ ۝ إِنَّ اللَّهَ لَا يَظْلِمُ النَّاسَ شَيْئًا وَلَٰكِنَّ النَّاسَ أَنفُسَهُمْ يَظْلِمُونَ ۝ وَيَوْمَ يَحْشُرُهُمْ كَأَن لَّمْ يَلْبَثُوا إِلَّا سَاعَةً مِّنَ النَّهَارِ يَتَعَارَفُونَ بَيْنَهُمْ ۚ قَدْ خَسِرَ الَّذِينَ كَذَّبُوا بِلِقَاءِ اللَّهِ وَمَا كَانُوا مُهْتَدِينَ ۝ وَإِمَّا نُرِيَنَّكَ بَعْضَ الَّذِي نَعِدُهُمْ أَوْ نَتَوَفَّيَنَّكَ فَإِلَيْنَا مَرْجِعُهُمْ ثُمَّ اللَّهُ شَهِيدٌ عَلَىٰ مَا يَفْعَلُونَ ۝ وَلِكُلِّ أُمَّةٍ رَّسُولٌ ۖ فَإِذَا جَاءَ رَسُولُهُمْ قُضِيَ بَيْنَهُم بِالْقِسْطِ وَهُمْ لَا يُظْلَمُونَ ۝ وَيَقُولُونَ مَتَىٰ هَٰذَا الْوَعْدُ إِن كُنتُمْ صَادِقِينَ ۝ قُل لَّا أَمْلِكُ لِنَفْسِي ضَرًّا وَلَا نَفْعًا إِلَّا مَا شَاءَ اللَّهُ ۗ لِكُلِّ أُمَّةٍ أَجَلٌ ۚ إِذَا جَاءَ أَجَلُهُمْ فَلَا يَسْتَأْخِرُونَ سَاعَةً وَلَا يَسْتَقْدِمُونَ ۝ قُلْ أَرَأَيْتُمْ إِنْ أَتَاكُمْ عَذَابُهُ بَيَاتًا أَوْ نَهَارًا مَّاذَا يَسْتَعْجِلُ مِنْهُ الْمُجْرِمُونَ ۝ أَثُمَّ إِذَا مَا وَقَعَ آمَنْتُم بِهِ ۚ آلْآنَ وَقَدْ كُنتُم بِهِ تَسْتَعْجِلُونَ ۝ ثُمَّ قِيلَ لِلَّذِينَ ظَلَمُوا ذُوقُوا عَذَابَ الْخُلْدِ هَلْ تُجْزَوْنَ إِلَّا بِمَا كُنتُمْ تَكْسِبُونَ ۝ وَيَسْتَنبِئُونَكَ أَحَقٌّ هُوَ ۖ قُلْ إِي وَرَبِّي إِنَّهُ لَحَقٌّ وَمَا أَنتُم بِمُعْجِزِينَ ۝ وَلَوْ أَنَّ لِكُلِّ نَفْسٍ ظَلَمَتْ مَا فِي الْأَرْضِ لَافْتَدَتْ بِهِ ۗ وَأَسَرُّوا النَّدَامَةَ لَمَّا رَأَوُا الْعَذَابَ ۖ وَقُضِيَ بَيْنَهُم بِالْقِسْطِ ۚ وَهُمْ لَا يُظْلَمُونَ ۝ أَلَا إِنَّ لِلَّهِ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ ۗ أَلَا إِنَّ وَعْدَ اللَّهِ حَقٌّ وَلَٰكِنَّ أَكْثَرَهُمْ لَا يَعْلَمُونَ ۝ هُوَ يُحْيِي وَيُمِيتُ وَإِلَيْهِ تُرْجَعُونَ ۝ يَا أَيُّهَا النَّاسُ قَدْ جَاءَتْكُم مَّوْعِظَةٌ مِّن رَّبِّكُمْ وَشِفَاءٌ لِّمَا فِي الصُّدُورِ وَهُدًى وَرَحْمَةٌ لِّلْمُؤْمِنِينَ ۝ قُلْ بِفَضْلِ اللَّهِ وَبِرَحْمَتِهِ فَبِذَٰلِكَ فَلْيَفْرَحُوا هُوَ خَيْرٌ مِّمَّا يَجْمَعُونَ ۝",
+        "surat_lanjutan": "Ad-Duha",
+        "ayat_lanjutan": 1,
+        "lanjutan": "وَالضُّحَىٰ ۝ وَاللَّيْلِ إِذَا سَجَىٰ"
       }
     ]
   },
+  // PAKET 16
   {
     "id": 16,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "فِيهَا زُجَاجٌ وَفِيهَا سَطْوَعٌ وَفِيهَا كَأْسٌ مَّقَامٌ وَفِيهَا الْخَالِصُ الطَّيِّبُ",
-        "referensi": "Surat As-Saffat: 45-47",
-        "kunciLabel": "3 Ayat Surat As-Saffat (ayat 45-47):",
-        "kunciArab": "(٤٥) فِيهَا زُجَاجٌ ۝ (٤٦) وَفِيهَا سَطْوَعٌ ۝ (٤٧) وَفِيهَا كَأْسٌ مَّقَامٌ"
+        "surat": "Ash-Shams",
+        "ayat": 9,
+        "teks": "قَدْ أَفْلَحَ مَن زَكَّاهَا ۝ وَقَدْ خَابَ مَن دَسَّاهَا ۝",
+        "lanjutan": "كَذَّبَتْ ثَمُودُ بِطَغْوَاهَا ۝ إِذِ انبَعَثَ أَشْقَاهَا"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "فِي أَيَّامٍ نَّحِسَاتٍ حَتَّىٰ يَبْلُغَ أَشُدَّهُ وَيَبْلُغَ أَرْبَعِينَ سَنَةً قَالَ رَبِّ أَوْزِعْنِي",
-        "referensi": "Surat Al-Ahqaf: 15",
-        "kunciLabel": "3 Ayat Surat Al-Ahqaf (ayat 15-17):",
-        "kunciArab": "(١٥) فِي أَيَّامٍ نَّحِسَاتٍ حَتَّىٰ يَبْلُغَ أَشُدَّهُ وَيَبْلُغَ أَرْبَعِينَ سَنَةً ۝ (١٦) قَالَ رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَىٰ وَالِدَيَّ ۝ (١٧) وَأَنْ أَعْمَلَ صَالِحًا تَرْضَاهُ"
+        "surat": "Al-Lail",
+        "ayat": 5,
+        "teks": "فَأَمَّا مَنْ أَعْطَىٰ وَاتَّقَىٰ ۝ وَصَدَّقَ بِالْحُسْنَىٰ ۝",
+        "lanjutan": "فَسَنُيَسِّرُهُ لِلْيُسْرَىٰ ۝ وَأَمَّا مَن بَخِلَ وَاسْتَغْنَىٰ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Humazah ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Humazah 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-Humazah]"
+        "surat": "Ad-Duha",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat Ad-Duha"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...ثُمَّ كَلَّا سَيَعْلَمُونَ",
-        "kunciLabel": "Surat berikutnya: An-Nazi'at - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat An-Nazi'at] ۝ (٢) [Ayat 2 Surat An-Nazi'at] ۝ (٣) [Ayat 3 Surat An-Nazi'at] ۝ (٤) [Ayat 4 Surat An-Nazi'at] ۝ (٥) [Ayat 5 Surat An-Nazi'at]"
+        "surat_awal": "Ash-Sharh",
+        "ayat_awal": 8,
+        "teks": "إِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ فَإِذَا فَرَغْتَ فَانصَبْ ۝ وَإِلَىٰ رَبِّكَ فَارْغَب ۝",
+        "surat_lanjutan": "At-Tin",
+        "ayat_lanjutan": 1,
+        "lanjutan": "وَالتِّينِ وَالزَّيْتُونِ ۝ وَطُورِ سِينِينَ"
       }
     ]
   },
+  // PAKET 17
   {
     "id": 17,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَالَّذِي أَحْسَنَ فَأَحْسَنَ رَبُّكَ لِلْأَكْثَرِينَ أَشْقَىٰ وَالَّذِي أَحْسَنَ فَأَحْسَنَ",
-        "referensi": "Surat Al-Lail: 10-12",
-        "kunciLabel": "3 Ayat Surat Al-Lail (ayat 10-12):",
-        "kunciArab": "(١٠) وَالَّذِي أَحْسَنَ فَأَحْسَنَ رَبُّكَ لِلْأَكْثَرِينَ أَشْقَىٰ ۝ (١١) وَالَّذِي أَحْسَنَ فَأَحْسَنَ ۝ (١٢) إِنَّ عَلَيْنَا لَلْهُدَىٰ"
+        "surat": "Ad-Duha",
+        "ayat": 3,
+        "teks": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ ۝ وَلَلْآخِرَةُ خَيْرٌ لَّكَ مِنَ الْأُولَىٰ ۝",
+        "lanjutan": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ ۝ أَلَمْ يَجِدْكَ يَتِيمًا فَآوَىٰ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "أَشْجَعُ وَأَقْنَىٰ وَأَكْثَرُ مَالًا وَوَلَدًا وَجَاءَ كُلُّهُمْ بِجَحِيمٍ",
-        "referensi": "Surat Al-Ma'arij: 11-13",
-        "kunciLabel": "3 Ayat Surat Al-Ma'arij (ayat 11-13):",
-        "kunciArab": "(١١) أَشْجَعُ وَأَقْنَىٰ ۝ (١٢) وَأَكْثَرُ مَالًا وَوَلَدًا ۝ (١٣) وَجَاءَ كُلُّهُمْ بِجَحِيمٍ"
+        "surat": "Ash-Sharh",
+        "ayat": 1,
+        "teks": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ ۝ وَوَضَعْنَا عَنكَ وِزْرَكَ ۝",
+        "lanjutan": "الَّذِي أَنقَضَ ظَهْرَكَ ۝ وَرَفَعْنَا لَكَ ذِكْرَكَ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Balad ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Balad 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-Balad]"
+        "surat": "At-Tin",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat At-Tin"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...وَأَنَّهُ كَانَ رِجَالٌ مِّنَ الْإِنسِ يَعُوذُونَ بِرِجَالٍ مِّنَ الْجِنِّ",
-        "kunciLabel": "Surat berikutnya: Al-Muzzammil - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Muzzammil] ۝ (٢) [Ayat 2 Surat Al-Muzzammil] ۝ (٣) [Ayat 3 Surat Al-Muzzammil] ۝ (٤) [Ayat 4 Surat Al-Muzzammil] ۝ (٥) [Ayat 5 Surat Al-Muzzammil]"
+        "surat_awal": "Al-Alaq",
+        "ayat_awal": 19,
+        "teks": "كَلَّا لَا تُطِعْهُ وَاسْجُدْ وَاقْتَرِب ۝",
+        "surat_lanjutan": "Al-Qadr",
+        "ayat_lanjutan": 1,
+        "lanjutan": "إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ ۝ وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ"
       }
     ]
   },
+  // PAKET 18
   {
     "id": 18,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "قَدْ أَفْلَحَ مَن زَكَّاهَا وَقَدْ خَابَ مَن دَسَّاهَا كَذَّبَتْ ثَمُودُ بِطَغْوَاهَا",
-        "referensi": "Surat Ash-Shams: 9-11",
-        "kunciLabel": "3 Ayat Surat Ash-Shams (ayat 9-11):",
-        "kunciArab": "(٩) قَدْ أَفْلَحَ مَن زَكَّاهَا ۝ (١٠) وَقَدْ خَابَ مَن دَسَّاهَا ۝ (١١) كَذَّبَتْ ثَمُودُ بِطَغْوَاهَا"
+        "surat": "At-Tin",
+        "ayat": 6,
+        "teks": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ ۝",
+        "lanjutan": "فَمَا يُكَذِّبُكَ بَعْدُ بِالدِّينِ ۝ أَلَيْسَ اللَّهُ بِأَحْكَمِ الْحَاكِمِينَ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "خُلِقَ مِن مَّاءٍ دَافِقٍ يَخْرُجُ مِن بَيْنِ الصُّلْبِ وَالتَّرَائِبِ إِنَّهُ عَلَىٰ رَجْعِهِ لَقَادِرٌ",
-        "referensi": "Surat At-Tariq: 6-8",
-        "kunciLabel": "3 Ayat Surat At-Tariq (ayat 6-8):",
-        "kunciArab": "(٦) يَخْرُجُ مِن بَيْنِ الصُّلْبِ وَالتَّرَائِبِ ۝ (٧) إِنَّهُ عَلَىٰ رَجْعِهِ لَقَادِرٌ ۝ (٨) يَوْمَ تُبْلَى السَّرَائِرُ"
+        "surat": "Al-Alaq",
+        "ayat": 1,
+        "teks": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ ۝ خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ ۝",
+        "lanjutan": "اقْرَأْ وَرَبُّكَ الْأَكْرَمُ ۝ الَّذِي عَلَّمَ بِالْقَلَمِ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat 'Abasa ayat 24-28",
-        "rentangAyat": "Ayat 24-28",
-        "kunciLabel": "5 Ayat lengkap (Surat 'Abasa 24-28):",
-        "kunciArab": "[Ayat 24-28 Surat 'Abasa]"
+        "surat": "Al-Qadr",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat Al-Qadr"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...أُولَٰئِكَ أَصْحَابُ الْمَيْمَنَةِ",
-        "kunciLabel": "Surat berikutnya: Ash-Shams - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Ash-Shams] ۝ (٢) [Ayat 2 Surat Ash-Shams] ۝ (٣) [Ayat 3 Surat Ash-Shams] ۝ (٤) [Ayat 4 Surat Ash-Shams] ۝ (٥) [Ayat 5 Surat Ash-Shams]"
+        "surat_awal": "Al-Bayyinah",
+        "ayat_awal": 8,
+        "teks": "إِنَّ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ وَالْمُشْرِكِينَ فِي نَارِ جَهَنَّمَ خَالِدِينَ فِيهَا ۚ أُولَٰئِكَ هُمْ شَرُّ الْبَرِيَّةِ ۝ إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ أُولَٰئِكَ هُمْ خَيْرُ الْبَرِيَّةِ ۝ جَزَاؤُهُمْ عِندَ رَبِّهِمْ جَنَّاتُ عَدْنٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ خَالِدِينَ فِيهَا أَبَدًا ۖ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ ۚ ذَٰلِكَ لِمَنْ خَشِيَ رَبَّهُ ۝",
+        "surat_lanjutan": "Az-Zalzalah",
+        "ayat_lanjutan": 1,
+        "lanjutan": "إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا ۝ وَأَخْرَجَتِ الْأَرْضُ أَثْقَالَهَا"
       }
     ]
   },
+  // PAKET 19
   {
     "id": 19,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "فَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِيَمِينِهِ فَيَقُولُ هَاؤُمُ اقْرَءُوا كِتَابِيهْ إِنِّي ظَنَنتُ",
-        "referensi": "Surat Al-Haqqah: 19-21",
-        "kunciLabel": "3 Ayat Surat Al-Haqqah (ayat 19-21):",
-        "kunciArab": "(١٩) فَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِيَمِينِهِ فَيَقُولُ هَاؤُمُ اقْرَءُوا كِتَابِيهْ ۝ (٢٠) إِنِّي ظَنَنتُ أَنِّي مُلَاقٍ حِسَابِيهْ ۝ (٢١) فَهُوَ فِي عِيشَةٍ رَّاضِيَةٍ"
+        "surat": "Al-Qadr",
+        "ayat": 4,
+        "teks": "تَنَزَّلُ الْمَلَائِكَةُ وَالرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ ۝",
+        "lanjutan": "سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "يُعْرَفُ الْمُجْرِمُونَ بِسِيمَاهُمْ فَيُؤْخَذُ بِالنَّوَاصِي وَالْأَقْدَامِ فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ",
-        "referensi": "Surat Ar-Rahman: 41-43",
-        "kunciLabel": "3 Ayat Surat Ar-Rahman (ayat 41-43):",
-        "kunciArab": "(٤١) يُعْرَفُ الْمُجْرِمُونَ بِسِيمَاهُمْ فَيُؤْخَذُ بِالنَّوَاصِي وَالْأَقْدَامِ ۝ (٤٢) فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ ۝ (٤٣) هَٰذِهِ جَهَنَّمُ الَّتِي يُكَذِّبُ بِهَا الْمُجْرِمُونَ"
+        "surat": "Al-Bayyinah",
+        "ayat": 5,
+        "teks": "وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ حُنَفَاءَ وَيُقِيمُوا الصَّلَاةَ وَيُؤْتُوا الزَّكَاةَ ۚ ...",
+        "lanjutan": "وَذَٰلِكَ دِينُ الْقَيِّمَةِ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat An-Nazi'at ayat 11-15",
-        "rentangAyat": "Ayat 11-15",
-        "kunciLabel": "5 Ayat lengkap (Surat An-Nazi'at 11-15):",
-        "kunciArab": "[Ayat 11-15 Surat An-Nazi'at]"
+        "surat": "Az-Zalzalah",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat Az-Zalzalah"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...قُلْ أَرَأَيْتُمْ إِنْ أَصْبَحَ مَاؤُكُمْ غَوْرًا فَمَنْ يَأْتِيكُمْ بِمَاءٍ مَعِينٍ",
-        "kunciLabel": "Surat berikutnya: Al-Qalam - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Qalam] ۝ (٢) [Ayat 2 Surat Al-Qalam] ۝ (٣) [Ayat 3 Surat Al-Qalam] ۝ (٤) [Ayat 4 Surat Al-Qalam] ۝ (٥) [Ayat 5 Surat Al-Qalam]"
+        "surat_awal": "Al-Adiyat",
+        "ayat_awal": 11,
+        "teks": "إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍ لَّخَبِيرٌ ۝",
+        "surat_lanjutan": "Al-Qari'ah",
+        "ayat_lanjutan": 1,
+        "lanjutan": "الْقَارِعَةُ ۝ مَا الْقَارِعَةُ ۝ وَمَا أَدْرَاكَ مَا الْقَارِعَةُ"
       }
     ]
   },
+  // PAKET 20
   {
     "id": 20,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "كَلَّا بَلْ تُحِبُّونَ الْعَاجِلَةَ وَتَذَرُونَ الْآخِرَةَ وُجُوهٌ يَوْمَئِذٍ نَّاضِرَةٌ إِلَىٰ رَبِّهَا نَاظِرَةٌ",
-        "referensi": "Surat Al-Qiyamah: 20-23",
-        "kunciLabel": "3 Ayat Surat Al-Qiyamah (ayat 21-23):",
-        "kunciArab": "(٢١) وَتَذَرُونَ الْآخِرَةَ ۝ (٢٢) وُجُوهٌ يَوْمَئِذٍ نَّاضِرَةٌ ۝ (٢٣) إِلَىٰ رَبِّهَا نَاظِرَةٌ"
+        "surat": "Az-Zalzalah",
+        "ayat": 6,
+        "teks": "يَوْمَئِذٍ يَصْدُرُ النَّاسُ أَشْتَاتًا لِّيُرَوْا أَعْمَالَهُمْ ۝",
+        "lanjutan": "فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ ۝ وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "يَوْمَ يُكْشَفُ عَن سَاقٍ وَيُدْعَوْنَ إِلَى السُّجُودِ فَلَا يَسْتَطِيعُونَ خَاشِعَةً أَبْصَارُهُمْ",
-        "referensi": "Surat Al-Qalam: 42-44",
-        "kunciLabel": "3 Ayat Surat Al-Qalam (ayat 42-44):",
-        "kunciArab": "(٤٢) يَوْمَ يُكْشَفُ عَن سَاقٍ وَيُدْعَوْنَ إِلَى السُّجُودِ فَلَا يَسْتَطِيعُونَ ۝ (٤٣) خَاشِعَةً أَبْصَارُهُمْ ۝ (٤٤) تَرْهَقُهُمْ ذِلَّةٌ"
+        "surat": "Al-Adiyat",
+        "ayat": 1,
+        "teks": "وَالْعَادِيَاتِ ضَبْحًا ۝ فَالْمُورِيَاتِ قَدْحًا ۝",
+        "lanjutan": "فَالْمُغِيرَاتِ صُبْحًا ۝ فَأَثَرْنَ بِهِ نَقْعًا"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Kafirun ayat 1-6",
-        "rentangAyat": "Ayat 1-6",
-        "kunciLabel": "6 Ayat lengkap (Surat Al-Kafirun 1-6):",
-        "kunciArab": "[Ayat 1-6 Surat Al-Kafirun]"
+        "surat": "Al-Qari'ah",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat Al-Qari'ah"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...كَلَّا لَا تُطِعْهُ",
-        "kunciLabel": "Surat berikutnya: Al-Qadr - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Qadr] ۝ (٢) [Ayat 2 Surat Al-Qadr] ۝ (٣) [Ayat 3 Surat Al-Qadr] ۝ (٤) [Ayat 4 Surat Al-Qadr] ۝ (٥) [Ayat 5 Surat Al-Qadr]"
+        "surat_awal": "At-Takathur",
+        "ayat_awal": 8,
+        "teks": "ثُمَّ لَتُسْأَلُنَّ يَوْمَئِذٍ عَنِ النَّعِيمِ ۝",
+        "surat_lanjutan": "Al-Asr",
+        "ayat_lanjutan": 1,
+        "lanjutan": "وَالْعَصْرِ ۝ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ"
       }
     ]
   },
+  // PAKET 21
   {
     "id": 21,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "إِنَّ رَبَّكَ يَعْلَمُ أَنَّكَ تَقُومُ أَدْنَىٰ مِن ثُلُثَيِ اللَّيْلِ وَنِصْفَهُ وَثُلُثَهُ وَطَائِفَةٌ مِّنَ الَّذِينَ مَعَكَ",
-        "referensi": "Surat Al-Muzzammil: 20",
-        "kunciLabel": "3 Ayat Surat Al-Muzzammil (ayat 20-22):",
-        "kunciArab": "(٢٠) إِنَّ رَبَّكَ يَعْلَمُ أَنَّكَ تَقُومُ أَدْنَىٰ مِن ثُلُثَيِ اللَّيْلِ وَنِصْفَهُ وَثُلُثَهُ ۝ (٢١) إِنَّ لَكَ فِي النَّهَارِ سَبْحًا طَوِيلًا ۝ (٢٢) وَاذْكُرِ اسْمَ رَبِّكَ وَتَبَتَّلْ إِلَيْهِ تَبْتِيلًا"
+        "surat": "Al-Qari'ah",
+        "ayat": 6,
+        "teks": "فَأَمَّا مَن ثَقُلَتْ مَوَازِينُهُ ۝ فَهُوَ فِي عِيشَةٍ رَّاضِيَةٍ ۝",
+        "lanjutan": "وَأَمَّا مَنْ خَفَّتْ مَوَازِينُهُ ۝ فَأُمُّهُ هَاوِيَةٌ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "سَأَلَ سَائِلٌ بِعَذَابٍ وَاقِعٍ لِّلْكَافِرِينَ لَيْسَ لَهُ دَافِعٌ مِّنَ اللَّهِ ذِي الْمَعَارِجِ",
-        "referensi": "Surat Al-Ma'arij: 1-3",
-        "kunciLabel": "3 Ayat awal Surat Al-Ma'arij (1-3):",
-        "kunciArab": "(١) سَأَلَ سَائِلٌ بِعَذَابٍ وَاقِعٍ ۝ (٢) لِّلْكَافِرِينَ لَيْسَ لَهُ دَافِعٌ ۝ (٣) مِّنَ اللَّهِ ذِي الْمَعَارِجِ"
+        "surat": "At-Takathur",
+        "ayat": 1,
+        "teks": "أَلْهَاكُمُ التَّكَاثُرُ ۝ حَتَّىٰ زُرْتُمُ الْمَقَابِرَ ۝",
+        "lanjutan": "كَلَّا سَوْفَ تَعْلَمُونَ ۝ ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Lail ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Lail 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-Lail]"
+        "surat": "Al-Asr",
+        "ayat": "1-3",
+        "perintah": "Bacakanlah ayat 1-3 dari Surat Al-Asr"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...وَقَدْ خَابَ مَن دَسَّاهَا",
-        "kunciLabel": "Surat berikutnya: Al-Lail - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Lail] ۝ (٢) [Ayat 2 Surat Al-Lail] ۝ (٣) [Ayat 3 Surat Al-Lail] ۝ (٤) [Ayat 4 Surat Al-Lail] ۝ (٥) [Ayat 5 Surat Al-Lail]"
+        "surat_awal": "Al-Humazah",
+        "ayat_awal": 9,
+        "teks": "فِي عَمَدٍ مُّمَدَّدَةٍ ۝",
+        "surat_lanjutan": "Al-Fil",
+        "ayat_lanjutan": 1,
+        "lanjutan": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ"
       }
     ]
   },
+  // PAKET 22
   {
     "id": 22,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "خُلِقَ مِن مَّاءٍ دَافِقٍ يَخْرُجُ مِن بَيْنِ الصُّلْبِ وَالتَّرَائِبِ إِنَّهُ عَلَىٰ رَجْعِهِ لَقَادِرٌ",
-        "referensi": "Surat At-Tariq: 6-8",
-        "kunciLabel": "3 Ayat Surat At-Tariq (ayat 6-8):",
-        "kunciArab": "(٦) خُلِقَ مِن مَّاءٍ دَافِقٍ ۝ (٧) يَخْرُجُ مِن بَيْنِ الصُّلْبِ وَالتَّرَائِبِ ۝ (٨) إِنَّهُ عَلَىٰ رَجْعِهِ لَقَادِرٌ"
+        "surat": "Al-Asr",
+        "ayat": 2,
+        "teks": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ ...",
+        "lanjutan": "وَتَوَاصَوْا بِالصَّبْرِ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَمَا تُجْزَوْنَ إِلَّا مَا كُنتُمْ تَعْمَلُونَ إِنَّ الْمُتَّقِينَ فِي جَنَّاتٍ وَنَعِيمٍ فَاكِهِينَ بِمَا آتَاهُمْ",
-        "referensi": "Surat As-Saffat: 39-41",
-        "kunciLabel": "3 Ayat Surat As-Saffat (ayat 39-41):",
-        "kunciArab": "(٣٩) وَمَا تُجْزَوْنَ إِلَّا مَا كُنتُمْ تَعْمَلُونَ ۝ (٤٠) إِنَّ الْمُتَّقِينَ فِي جَنَّاتٍ وَنَعِيمٍ ۝ (٤١) فَاكِهِينَ بِمَا آتَاهُمْ رَبُّهُمْ"
+        "surat": "Al-Humazah",
+        "ayat": 1,
+        "teks": "وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ ۝ الَّذِي جَمَعَ مَالًا وَعَدَّدَهُ ۝",
+        "lanjutan": "يَحْسَبُ أَنَّ مَالَهُ أَخْلَدَهُ ۝ كَلَّا ۖ لَيُنبَذَنَّ فِي الْحُطَمَةِ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Mutaffifin ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Mutaffifin 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-Mutaffifin]"
+        "surat": "Al-Fil",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat Al-Fil"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...فَوَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
-        "kunciLabel": "Surat berikutnya: Al-Inshiqaq - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Inshiqaq] ۝ (٢) [Ayat 2 Surat Al-Inshiqaq] ۝ (٣) [Ayat 3 Surat Al-Inshiqaq] ۝ (٤) [Ayat 4 Surat Al-Inshiqaq] ۝ (٥) [Ayat 5 Surat Al-Inshiqaq]"
+        "surat_awal": "Quraish",
+        "ayat_awal": 4,
+        "teks": "الَّذِي أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ ۝",
+        "surat_lanjutan": "Al-Ma'un",
+        "ayat_lanjutan": 1,
+        "lanjutan": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ"
       }
     ]
   },
+  // PAKET 23
   {
     "id": 23,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "أَلَمْ تَكُنْ آيَاتِي تُتْلَىٰ عَلَيْكُمْ فَكُنتُم بِهَا تُكَذِّبُونَ قَالُوا رَبَّنَا غَلَبَتْ عَلَيْنَا شِقْوَتُنَا",
-        "referensi": "Surat Al-Mu'minun: 105-107",
-        "kunciLabel": "3 Ayat Surat Al-Mu'minun (ayat 105-107):",
-        "kunciArab": "(١٠٥) أَلَمْ تَكُنْ آيَاتِي تُتْلَىٰ عَلَيْكُمْ فَكُنتُم بِهَا تُكَذِّبُونَ ۝ (١٠٦) قَالُوا رَبَّنَا غَلَبَتْ عَلَيْنَا شِقْوَتُنَا ۝ (١٠٧) رَبَّنَا أَخْرِجْنَا مِنْهَا"
+        "surat": "Al-Fil",
+        "ayat": 2,
+        "teks": "أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ ۝",
+        "lanjutan": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "فَسُبْحَانَ الَّذِي بِيَدِهِ مَلَكُوتُ كُلِّ شَيْءٍ وَإِلَيْهِ تُرْجَعُونَ أَلَمْ يَأْتِكُمْ نَبَأُ الْكَثِيرِ الْأَشْرَارِ",
-        "referensi": "Surat Ya Sin: 83 & Al-Muddassir: 1",
-        "kunciLabel": "3 Ayat Surat Ya Sin (ayat 82-83) & Al-Muddassir 1:",
-        "kunciArab": "(٨٢) إِنَّمَا أَمْرُهُ إِذَا أَرَادَ شَيْئًا أَن يَقُولَ لَهُ كُن فَيَكُونُ ۝ (٨٣) فَسُبْحَانَ الَّذِي بِيَدِهِ مَلَكُوتُ كُلِّ شَيْءٍ وَإِلَيْهِ تُرْجَعُونَ"
+        "surat": "Quraish",
+        "ayat": 1,
+        "teks": "لِإِيلَافِ قُرَيْشٍ ۝ إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ ۝",
+        "lanjutan": "فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat At-Takwir ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat At-Takwir 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat At-Takwir]"
+        "surat": "Al-Ma'un",
+        "ayat": "1-7",
+        "perintah": "Bacakanlah ayat 1-7 dari Surat Al-Ma'un"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...فَإِذَا شَاءَ اللَّهُ لَأَمَرَهُمْ",
-        "kunciLabel": "Surat berikutnya: Al-Insan - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Insan] ۝ (٢) [Ayat 2 Surat Al-Insan] ۝ (٣) [Ayat 3 Surat Al-Insan] ۝ (٤) [Ayat 4 Surat Al-Insan] ۝ (٥) [Ayat 5 Surat Al-Insan]"
+        "surat_awal": "Al-Kawthar",
+        "ayat_awal": 3,
+        "teks": "إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ ۝",
+        "surat_lanjutan": "Al-Kafirun",
+        "ayat_lanjutan": 1,
+        "lanjutan": "قُلْ يَا أَيُّهَا الْكَافِرُونَ ۝ لَا أَعْبُدُ مَا تَعْبُدُونَ"
       }
     ]
   },
+  // PAKET 24
   {
     "id": 24,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "كَلَّا إِنَّ كِتَابَ الْفُجَّارِ لَفِي سِجِّينٍ وَمَا أَدْرَاكَ مَا سِجِّينٌ كِتَابٌ مَّرْقُومٌ",
-        "referensi": "Surat Al-Mutaffifin: 7-9",
-        "kunciLabel": "3 Ayat Surat Al-Mutaffifin (ayat 7-9):",
-        "kunciArab": "(٧) كَلَّا إِنَّ كِتَابَ الْفُجَّارِ لَفِي سِجِّينٍ ۝ (٨) وَمَا أَدْرَاكَ مَا سِجِّينٌ ۝ (٩) كِتَابٌ مَّرْقُومٌ"
+        "surat": "Al-Ma'un",
+        "ayat": 4,
+        "teks": "فَوَيْلٌ لِّلْمُصَلِّينَ ۝ الَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ ۝",
+        "lanjutan": "الَّذِينَ هُمْ يُرَاءُونَ ۝ وَيَمْنَعُونَ الْمَاعُونَ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "عَمَّ يَتَسَاءَلُونَ عَنِ النَّبَإِ الْعَظِيمِ الَّذِي هُمْ فِيهِ مُخْتَلِفُونَ",
-        "referensi": "Surat An-Naba': 1-3",
-        "kunciLabel": "3 Ayat awal Surat An-Naba' (1-3):",
-        "kunciArab": "(١) عَمَّ يَتَسَاءَلُونَ ۝ (٢) عَنِ النَّبَإِ الْعَظِيمِ ۝ (٣) الَّذِي هُمْ فِيهِ مُخْتَلِفُونَ"
+        "surat": "Al-Kawthar",
+        "ayat": 1,
+        "teks": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ ۝",
+        "lanjutan": "فَصَلِّ لِرَبِّكَ وَانْحَرْ ۝ إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Buruj ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Buruj 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-Buruj]"
+        "surat": "Al-Kafirun",
+        "ayat": "1-6",
+        "perintah": "Bacakanlah ayat 1-6 dari Surat Al-Kafirun"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ",
-        "kunciLabel": "Surat berikutnya: Al-Inshirah - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Inshirah] ۝ (٢) [Ayat 2 Surat Al-Inshirah] ۝ (٣) [Ayat 3 Surat Al-Inshirah] ۝ (٤) [Ayat 4 Surat Al-Inshirah] ۝ (٥) [Ayat 5 Surat Al-Inshirah]"
+        "surat_awal": "An-Nasr",
+        "ayat_awal": 3,
+        "teks": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا ۝",
+        "surat_lanjutan": "Al-Masad",
+        "ayat_lanjutan": 1,
+        "lanjutan": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ"
       }
     ]
   },
+  // PAKET 25
   {
     "id": 25,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "إِنَّ الْإِنسَانَ لِرَبِّهِ لَكَنُودٌ وَإِنَّهُ عَلَىٰ ذَٰلِكَ لَشَهِيدٌ وَإِنَّهُ لِحُبِّ الْخَيْرِ لَشَدِيدٌ",
-        "referensi": "Surat Al-'Adiyat: 6-8",
-        "kunciLabel": "3 Ayat Surat Al-'Adiyat (ayat 6-8):",
-        "kunciArab": "(٦) إِنَّ الْإِنسَانَ لِرَبِّهِ لَكَنُودٌ ۝ (٧) وَإِنَّهُ عَلَىٰ ذَٰلِكَ لَشَهِيدٌ ۝ (٨) وَإِنَّهُ لِحُبِّ الْخَيْرِ لَشَدِيدٌ"
+        "surat": "Al-Kafirun",
+        "ayat": 4,
+        "teks": "وَلَا أَنَا عَابِدٌ مَّا عَبَدتُّمْ ۝ وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ ۝",
+        "lanjutan": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "قَدْ أَفْلَحَ مَن زَكَّاهَا وَقَدْ خَابَ مَن دَسَّاهَا كَذَّبَتْ ثَمُودُ بِطَغْوَاهَا",
-        "referensi": "Surat Ash-Shams: 9-11",
-        "kunciLabel": "3 Ayat Surat Ash-Shams (ayat 9-11):",
-        "kunciArab": "(٩) قَدْ أَفْلَحَ مَن زَكَّاهَا ۝ (١٠) وَقَدْ خَابَ مَن دَسَّاهَا ۝ (١١) كَذَّبَتْ ثَمُودُ بِطَغْوَاهَا"
+        "surat": "An-Nasr",
+        "ayat": 1,
+        "teks": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ ۝ وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا ۝",
+        "lanjutan": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Falaq ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Falaq 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-Falaq]"
+        "surat": "Al-Masad",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat Al-Masad"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...غَفُورٌ وَدُودٌ",
-        "kunciLabel": "Surat berikutnya: At-Tariq - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat At-Tariq] ۝ (٢) [Ayat 2 Surat At-Tariq] ۝ (٣) [Ayat 3 Surat At-Tariq] ۝ (٤) [Ayat 4 Surat At-Tariq] ۝ (٥) [Ayat 5 Surat At-Tariq]"
+        "surat_awal": "Al-Ikhlas",
+        "ayat_awal": 4,
+        "teks": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ ۝",
+        "surat_lanjutan": "Al-Falaq",
+        "ayat_lanjutan": 1,
+        "lanjutan": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ مِن شَرِّ مَا خَلَقَ"
       }
     ]
   },
+  // PAKET 26
   {
     "id": 26,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "كُلَّمَا دَخَلَ عَلَيْهَا زَكَرِيَّا الْمِحْرَابَ وَجَدَ عِندَهَا رِزْقًا قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا",
-        "referensi": "Surat Aali Imran: 37",
-        "kunciLabel": "3 Ayat Surat Aali Imran (ayat 37-39):",
-        "kunciArab": "(٣٧) كُلَّمَا دَخَلَ عَلَيْهَا زَكَرِيَّا الْمِحْرَابَ وَجَدَ عِندَهَا رِزْقًا ۝ (٣٨) هُنَالِكَ دَعَا زَكَرِيَّا رَبَّهُ ۝ (٣٩) فَنَادَتْهُ الْمَلَائِكَةُ"
+        "surat": "Al-Masad",
+        "ayat": 2,
+        "teks": "مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ ۝ سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ ۝",
+        "lanjutan": "وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ ۝ فِي جِيدِهَا حَبْلٌ مِّن مَّسَدٍ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُحِلُّوا شَعَائِرَ اللَّهِ وَلَا الشَّهْرَ الْحَرَامَ وَلَا الْهَدْيَ وَلَا الْقَلَائِدَ",
-        "referensi": "Surat Al-Ma'idah: 2",
-        "kunciLabel": "3 Ayat Surat Al-Ma'idah (ayat 2-4):",
-        "kunciArab": "(٢) يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُحِلُّوا شَعَائِرَ اللَّهِ ۝ (٣) حُرِّمَتْ عَلَيْكُمُ الْمَيْتَةُ وَالدَّمُ ۝ (٤) يَسْأَلُونَكَ مَاذَا أُحِلَّ لَهُمْ"
+        "surat": "Al-Ikhlas",
+        "ayat": 1,
+        "teks": "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝",
+        "lanjutan": "لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Quraysh ayat 1-4",
-        "rentangAyat": "Ayat 1-4",
-        "kunciLabel": "4 Ayat lengkap (Surat Quraysh 1-4):",
-        "kunciArab": "[Ayat 1-4 Surat Quraysh]"
+        "surat": "Al-Falaq",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat Al-Falaq"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...وَمَا هُوَ بِقَوْلِ شَيْطَانٍ رَّجِيمٍ",
-        "kunciLabel": "Surat berikutnya: Al-Infitar - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Infitar] ۝ (٢) [Ayat 2 Surat Al-Infitar] ۝ (٣) [Ayat 3 Surat Al-Infitar] ۝ (٤) [Ayat 4 Surat Al-Infitar] ۝ (٥) [Ayat 5 Surat Al-Infitar]"
+        "surat_awal": "An-Nas",
+        "ayat_awal": 6,
+        "teks": "مِنَ الْجِنَّةِ وَالنَّاسِ ۝",
+        "surat_lanjutan": "Al-Mulk",
+        "ayat_lanjutan": 1,
+        "lanjutan": "تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ"
       }
     ]
   },
+  // PAKET 27
   {
     "id": 27,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "أَمْ يَقُولُونَ نَحْنُ جَمِيعٌ مُّنتَصِرٌ سَيُهْزَمُ الْجَمْعُ وَيُوَلُّونَ الدُّبُرَ بَلِ السَّاعَةُ مَوْعِدُهُمْ",
-        "referensi": "Surat Al-Qamar: 44-46",
-        "kunciLabel": "3 Ayat Surat Al-Qamar (ayat 44-46):",
-        "kunciArab": "(٤٤) أَمْ يَقُولُونَ نَحْنُ جَمِيعٌ مُّنتَصِرٌ ۝ (٤٥) سَيُهْزَمُ الْجَمْعُ وَيُوَلُّونَ الدُّبُرَ ۝ (٤٦) بَلِ السَّاعَةُ مَوْعِدُهُمْ وَالسَّاعَةُ أَدْهَىٰ وَأَمَرُّ"
+        "surat": "Al-Falaq",
+        "ayat": 3,
+        "teks": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝",
+        "lanjutan": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "إِذَا السَّمَاءُ انفَطَرَتْ وَإِذَا الْكَوَاكِبُ انتَثَرَتْ وَإِذَا الْبِحَارُ فُجِّرَتْ",
-        "referensi": "Surat Al-Infitar: 1-3",
-        "kunciLabel": "3 Ayat awal Surat Al-Infitar (1-3):",
-        "kunciArab": "(١) إِذَا السَّمَاءُ انفَطَرَتْ ۝ (٢) وَإِذَا الْكَوَاكِبُ انتَثَرَتْ ۝ (٣) وَإِذَا الْبِحَارُ فُجِّرَتْ"
+        "surat": "An-Nas",
+        "ayat": 1,
+        "teks": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝ مَلِكِ النَّاسِ ۝",
+        "lanjutan": "إِلَٰهِ النَّاسِ ۝ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Ash-Shams ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Ash-Shams 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Ash-Shams]"
+        "surat": "Al-Mulk",
+        "ayat": "1-3",
+        "perintah": "Bacakanlah ayat 1-3 dari Surat Al-Mulk"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...إِنَّهُ كَانَ عَبْدًا شَكُورًا",
-        "kunciLabel": "Surat berikutnya: Al-Jinn - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Jinn] ۝ (٢) [Ayat 2 Surat Al-Jinn] ۝ (٣) [Ayat 3 Surat Al-Jinn] ۝ (٤) [Ayat 4 Surat Al-Jinn] ۝ (٥) [Ayat 5 Surat Al-Jinn]"
+        "surat_awal": "Al-Qalam",
+        "ayat_awal": 52,
+        "teks": "وَمَا هُوَ إِلَّا ذِكْرٌ لِّلْعَالَمِينَ ۝",
+        "surat_lanjutan": "Al-Haqqah",
+        "ayat_lanjutan": 1,
+        "lanjutan": "الْحَاقَّةُ ۝ مَا الْحَاقَّةُ ۝ وَمَا أَدْرَاكَ مَا الْحَاقَّةُ"
       }
     ]
   },
+  // PAKET 28
   {
     "id": 28,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَالسَّمَاءِ ذَاتِ الْبُرُوجِ وَالْيَوْمِ الْمَوْعُودِ وَشَاهِدٍ وَمَشْهُودٍ قُتِلَ أَصْحَابُ الْأُخْدُودِ",
-        "referensi": "Surat Al-Buruj: 1-4",
-        "kunciLabel": "3 Ayat Surat Al-Buruj (ayat 1-3):",
-        "kunciArab": "(١) وَالسَّمَاءِ ذَاتِ الْبُرُوجِ ۝ (٢) وَالْيَوْمِ الْمَوْعُودِ ۝ (٣) وَشَاهِدٍ وَمَشْهُودٍ"
+        "surat": "Al-Mulk",
+        "ayat": 23,
+        "teks": "قُلْ هُوَ الَّذِي أَنشَأَكُمْ وَجَعَلَ لَكُمُ السَّمْعَ وَالْأَبْصَارَ وَالْأَفْئِدَةَ ۚ ...",
+        "lanjutan": "قَلِيلًا مَّا تَشْكُرُونَ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ الَّذِينَ يُكَذِّبُونَ بِيَوْمِ الدِّينِ وَمَا يُكَذِّبُ بِهِ إِلَّا كُلُّ مُعْتَدٍ أَثِيمٍ",
-        "referensi": "Surat Al-Mutaffifin: 10-12",
-        "kunciLabel": "3 Ayat Surat Al-Mutaffifin (ayat 10-12):",
-        "kunciArab": "(١٠) وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ ۝ (١١) الَّذِينَ يُكَذِّبُونَ بِيَوْمِ الدِّينِ ۝ (١٢) وَمَا يُكَذِّبُ بِهِ إِلَّا كُلُّ مُعْتَدٍ أَثِيمٍ"
+        "surat": "Al-Qalam",
+        "ayat": 35,
+        "teks": "أَنَّا نَزَّلْنَا عَلَيْكُم مَّاءً مُّثْجِرًا ۝",
+        "lanjutan": "لِنُحْيِيَ بِهِ بَلْدَةً مَّيْتًا وَنُسْقِيَهُ مِمَّا خَلَقْنَا أَنْعَامًا وَأَنَاسِيَّ كَثِيرًا"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat At-Tariq ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat At-Tariq 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat At-Tariq]"
+        "surat": "Nuh",
+        "ayat": "1-5",
+        "perintah": "Bacakanlah ayat 1-5 dari Surat Nuh"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...وَلَهُمْ عَذَابٌ مُّهِينٌ",
-        "kunciLabel": "Surat berikutnya: Al-Buruj - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-Buruj] ۝ (٢) [Ayat 2 Surat Al-Buruj] ۝ (٣) [Ayat 3 Surat Al-Buruj] ۝ (٤) [Ayat 4 Surat Al-Buruj] ۝ (٥) [Ayat 5 Surat Al-Buruj]"
+        "surat_awal": "Al-Jinn",
+        "ayat_awal": 28,
+        "teks": "أَن يَعْلَمَ أَن قَدْ أَبْلَغُوا رِسَالَاتِ رَبِّهِمْ وَأَحَاطَ بِمَا لَدَيْهِمْ وَأَحْصَىٰ كُلَّ شَيْءٍ عَدَدًا ۝",
+        "surat_lanjutan": "Al-Muzzammil",
+        "ayat_lanjutan": 1,
+        "lanjutan": "يَا أَيُّهَا الْمُزَّمِّلُ ۝ قُمِ اللَّيْلَ إِلَّا قَلِيلًا"
       }
     ]
   },
+  // PAKET 29
   {
     "id": 29,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍ لَّخَبِيرٌ وَإِنَّ الْإِنسَانَ لِيَطْغَىٰ أَن رَّآهُ اسْتَغْنَىٰ",
-        "referensi": "Surat Al-'Adiyat: 11-13",
-        "kunciLabel": "3 Ayat Surat Al-'Adiyat (ayat 11-13):",
-        "kunciArab": "(١١) إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍ لَّخَبِيرٌ ۝ (١٢) وَإِنَّ الْإِنسَانَ لِيَطْغَىٰ ۝ (١٣) أَن رَّآهُ اسْتَغْنَىٰ"
+        "surat": "Nuh",
+        "ayat": 17,
+        "teks": "وَاللَّهُ أَنبَتَكُم مِّنَ الْأَرْضِ نَبَاتًا ۝ ثُمَّ يُعِيدُكُمْ فِيهَا وَيُخْرِجُكُمْ إِخْرَاجًا ۝",
+        "lanjutan": "وَاللَّهُ جَعَلَ لَكُمُ الْأَرْضَ بِسَاطًا"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَلَقَدْ خَلَقْنَا الْإِنسَانَ وَنَعْلَمُ مَا تُوَسْوِسُ بِهِ نَفْسُهُ وَنَحْنُ أَقْرَبُ إِلَيْهِ مِنْ حَبْلِ الْوَرِيدِ",
-        "referensi": "Surat Qaf: 16",
-        "kunciLabel": "3 Ayat Surat Qaf (ayat 16-18):",
-        "kunciArab": "(١٦) وَلَقَدْ خَلَقْنَا الْإِنسَانَ وَنَعْلَمُ مَا تُوَسْوِسُ بِهِ نَفْسُهُ ۝ (١٧) إِذْ يَتَلَقَّى الْمُتَلَقِّيَانِ ۝ (١٨) مَا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ"
+        "surat": "Al-Muzzammil",
+        "ayat": 17,
+        "teks": "فَكَيْفَ تَتَّقُونَ إِن كَفَرْتُمْ يَوْمًا يَجْعَلُ الْوِلْدَانَ شِيبًا ۝",
+        "lanjutan": "السَّمَاءُ مُنفَطِرٌ بِهِ ۚ كَانَ وَعْدُهُ مَفْعُولًا"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Masad ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Masad 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-Masad]"
+        "surat": "Al-Muddathir",
+        "ayat": "11-17",
+        "perintah": "Bacakanlah ayat 11-17 dari Surat Al-Muddathir"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...وَإِنَّ عَلَيْهِ لَقَادِرُونَ",
-        "kunciLabel": "Surat berikutnya: Al-A'la - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat Al-A'la] ۝ (٢) [Ayat 2 Surat Al-A'la] ۝ (٣) [Ayat 3 Surat Al-A'la] ۝ (٤) [Ayat 4 Surat Al-A'la] ۝ (٥) [Ayat 5 Surat Al-A'la]"
+        "surat_awal": "Al-Insan",
+        "ayat_awal": 31,
+        "teks": "يُدْخِلُ مَن يَشَاءُ فِي رَحْمَتِهِ ۚ وَالظَّالِمِينَ أَعَدَّ لَهُمْ عَذَابًا أَلِيمًا ۝",
+        "surat_lanjutan": "Al-Mursalat",
+        "ayat_lanjutan": 1,
+        "lanjutan": "وَالْمُرْسَلَاتِ عُرْفًا ۝ فَالْعَاصِفَاتِ عَصْفًا"
       }
     ]
   },
+  // PAKET 30
   {
     "id": 30,
     "soal": [
       {
         "nomor": 1,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "فَاسْأَلْ بِهِ خَبِيرًا سَأَلَ سَائِلٌ بِعَذَابٍ وَاقِعٍ لِّلْكَافِرِينَ لَيْسَ لَهُ دَافِعٌ",
-        "referensi": "Surat Al-Ma'arij: 10-12",
-        "kunciLabel": "3 Ayat Surat Al-Ma'arij (ayat 10-12):",
-        "kunciArab": "(١٠) فَاسْأَلْ بِهِ خَبِيرًا ۝ (١١) سَأَلَ سَائِلٌ بِعَذَابٍ وَاقِعٍ ۝ (١٢) لِّلْكَافِرِينَ لَيْسَ لَهُ دَافِعٌ"
+        "surat": "Al-Muddathir",
+        "ayat": 38,
+        "teks": "كُلُّ نَفْسٍ بِمَا كَسَبَتْ رَهِينَةٌ ۝ إِلَّا أَصْحَابَ الْيَمِينِ ۝",
+        "lanjutan": "فِي جَنَّاتٍ يَتَسَاءَلُونَ ۝ عَنِ الْمُجْرِمِينَ"
       },
       {
         "nomor": 2,
         "jenis": "sambung",
-        "pertanyaan": "Sambungkan ayat berikut:",
-        "potonganAyat": "وَفِي ذَٰلِكَ فَلْيَتَنَافَسِ الْمُتَنَافِسُونَ وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ",
-        "referensi": "Surat Al-Mutaffifin: 26 & Al-Qadr: 2-3",
-        "kunciLabel": "3 Ayat Surat Al-Mutaffifin 26 & Al-Qadr (2-3):",
-        "kunciArab": "(٢٦) وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ ۝ (٢) خَيْرٌ مِّنْ أَلْفِ شَهْرٍ ۝ (٣) تَنَزَّلُ الْمَلَائِكَةُ وَالرُّوحُ"
+        "surat": "Al-Insan",
+        "ayat": 12,
+        "teks": "وَجَزَاهُم بِمَا صَبَرُوا جَنَّةً وَحَرِيرًا ۝",
+        "lanjutan": "مُّتَّكِئِينَ فِيهَا عَلَى الْأَرَائِكِ ۖ لَا يَرَوْنَ فِيهَا شَمْسًا وَلَا زَمْهَرِيرًا"
       },
       {
         "nomor": 3,
         "jenis": "bacakan",
-        "pertanyaan": "Bacakan Quran Surat Al-Fajr ayat 1-5",
-        "rentangAyat": "Ayat 1-5",
-        "kunciLabel": "5 Ayat lengkap (Surat Al-Fajr 1-5):",
-        "kunciArab": "[Ayat 1-5 Surat Al-Fajr]"
+        "surat": "An-Naba",
+        "ayat": "11-20",
+        "perintah": "Bacakanlah ayat 11-20 dari Surat An-Naba"
       },
       {
         "nomor": 4,
         "jenis": "sambung-surat",
-        "pertanyaan": "Sambungkan ayat terakhir sebuah surat ke awal surat berikutnya:",
-        "potonganAyat": "...فِي ذَٰلِكَ لَعِبْرَةٌ لِّمَن يَخْشَىٰ",
-        "kunciLabel": "Surat berikutnya: 'Abasa - 5 ayat awal:",
-        "kunciArab": "(١) [Ayat 1 Surat 'Abasa] ۝ (٢) [Ayat 2 Surat 'Abasa] ۝ (٣) [Ayat 3 Surat 'Abasa] ۝ (٤) [Ayat 4 Surat 'Abasa] ۝ (٥) [Ayat 5 Surat 'Abasa]"
+        "surat_awal": "Al-Bayyinah",
+        "ayat_awal": 8,
+        "teks": "إِنَّ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ وَالْمُشْرِكِينَ فِي نَارِ جَهَنَّمَ خَالِدِينَ فِيهَا ۚ أُولَٰئِكَ هُمْ شَرُّ الْبَرِيَّةِ ۝",
+        "surat_lanjutan": "Al-Zalzalah",
+        "ayat_lanjutan": 1,
+        "lanjutan": "إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا ۝ وَأَخْرَجَتِ الْأَرْضُ أَثْقَالَهَا"
       }
     ]
   }
 ];
 
-// Export untuk digunakan di browser
+// Export untuk digunakan di aplikasi
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { PAKET_SOAL };
+  module.exports = dataSoal;
 }
+
+// Log info
+console.log(`✅ Data soal MHQ berhasil dimuat`);
+console.log(`📦 Total Paket: ${dataSoal.length}`);
+console.log(`📝 Total Soal: ${dataSoal.reduce((acc, p) => acc + p.soal.length, 0)}`);
