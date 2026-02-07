@@ -5,6 +5,9 @@ import { put } from '@vercel/blob';
 
 const BLOB_KEY = 'mhq-used-paket.json';
 
+// In-memory fallback
+let memoryStore = { used: [] };
+
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -19,15 +22,28 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Reset ke array kosong
-    await put(BLOB_KEY, JSON.stringify({ used: [], resetAt: new Date().toISOString() }), {
-      contentType: 'application/json',
-      access: 'public',
-    });
+    // Reset memory
+    memoryStore.used = [];
+    
+    const hasBlobToken = process.env.BLOB_READ_WRITE_TOKEN;
+    
+    if (hasBlobToken) {
+      // Reset ke array kosong di Blob
+      try {
+        await put(BLOB_KEY, JSON.stringify({ used: [], resetAt: new Date().toISOString() }), {
+          contentType: 'application/json',
+          access: 'public',
+        });
+      } catch (blobError) {
+        console.error('Blob put error:', blobError);
+      }
+    } else {
+      console.log('Reset memory store (no BLOB_READ_WRITE_TOKEN)');
+    }
 
     return res.status(200).json({ success: true, used: [] });
   } catch (error) {
     console.error('Reset API Error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    return res.status(500).json({ error: 'Internal server error', details: error.message });
   }
 }

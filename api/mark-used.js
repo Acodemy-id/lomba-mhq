@@ -5,6 +5,9 @@ import { get, put } from '@vercel/blob';
 
 const BLOB_KEY = 'mhq-used-paket.json';
 
+// In-memory fallback jika blob tidak tersedia
+let memoryStore = { used: [] };
+
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -25,17 +28,27 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid paketId' });
     }
 
-    // Ambil data existing
+    // Cek apakah BLOB_READ_WRITE_TOKEN tersedia
+    const hasBlobToken = process.env.BLOB_READ_WRITE_TOKEN;
+    
     let used = [];
-    try {
-      const blob = await get(BLOB_KEY);
-      if (blob) {
-        const text = await blob.text();
-        const data = JSON.parse(text);
-        used = data.used || [];
+    
+    if (hasBlobToken) {
+      // Ambil data dari Blob
+      try {
+        const blob = await get(BLOB_KEY);
+        if (blob) {
+          const text = await blob.text();
+          const data = JSON.parse(text);
+          used = data.used || [];
+        }
+      } catch (e) {
+        console.log('Blob get error (file may not exist yet):', e.message);
       }
-    } catch (e) {
-      // File belum ada
+    } else {
+      // Fallback ke memory
+      used = memoryStore.used;
+      console.log('Using memory store (no BLOB_READ_WRITE_TOKEN)');
     }
 
     // Tambah paketId jika belum ada
@@ -43,15 +56,26 @@ export default async function handler(req, res) {
       used.push(paketId);
     }
 
-    // Simpan ke Blob
-    await put(BLOB_KEY, JSON.stringify({ used, updatedAt: new Date().toISOString() }), {
-      contentType: 'application/json',
-      access: 'public',
-    });
+    if (hasBlobToken) {
+      // Simpan ke Blob
+      try {
+        await put(BLOB_KEY, JSON.stringify({ used, updatedAt: new Date().toISOString() }), {
+          contentType: 'application/json',
+          access: 'public',
+        });
+      } catch (blobError) {
+        console.error('Blob put error:', blobError);
+        // Fallback ke memory
+        memoryStore.used = used;
+      }
+    } else {
+      // Simpan ke memory
+      memoryStore.used = used;
+    }
 
     return res.status(200).json({ success: true, used });
   } catch (error) {
     console.error('Mark Used API Error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    return res.status(500).json({ error: 'Internal server error', details: error.message });
   }
 }
