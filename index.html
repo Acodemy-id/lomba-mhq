@@ -7,9 +7,66 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- PASSWORD MODAL -->
+  <div id="passwordModal" class="password-overlay">
+    <div class="password-modal">
+      <div class="lock-icon">🔒</div>
+      <h2>Akses Terbatas</h2>
+      <p>Masukkan password untuk mengakses soal lomba MHQ.<br>Hanya untuk Juri/Panitia.</p>
+      <div class="password-input-group">
+        <input type="password" id="passwordInput" class="password-input" placeholder="PASSWORD" autocomplete="off">
+        <button onclick="checkPassword()" class="password-btn">Masuk</button>
+      </div>
+      <div id="passwordError" class="password-error">Password salah! Silakan coba lagi.</div>
+    </div>
+  </div>
+
+  <!-- RESET BUTTON -->
+  <button id="resetBtn" class="reset-btn" onclick="resetUsedPaket()" style="display: none;">
+    🔄 Reset Data Paket
+  </button>
+
+  <!-- ACCESSIBILITY PANEL -->
+  <div id="accessibilityPanel" class="accessibility-panel" style="display: none;">
+    <div class="accessibility-title">⚙️ Pengaturan Tampilan</div>
+    
+    <!-- Font Size -->
+    <div class="accessibility-row">
+      <span class="accessibility-label">Ukuran:</span>
+      <div class="font-size-control">
+        <button class="font-size-btn" onclick="changeFontSize(-2)">−</button>
+        <span id="fontSizeValue" class="font-size-value">24px</span>
+        <button class="font-size-btn" onclick="changeFontSize(2)">+</button>
+      </div>
+    </div>
+    
+    <!-- Font Family -->
+    <div class="accessibility-row">
+      <span class="accessibility-label">Font:</span>
+      <select id="fontSelect" class="font-select" onchange="changeFontFamily(this.value)">
+        <option value="'Amiri', 'Traditional Arabic', serif">Amiri</option>
+        <option value="'Scheherazade', 'Traditional Arabic', serif">Scheherazade</option>
+        <option value="'Traditional Arabic', serif">Traditional Arabic</option>
+        <option value="Arial, sans-serif">Arial</option>
+      </select>
+    </div>
+    
+    <!-- Font Color -->
+    <div class="accessibility-row">
+      <span class="accessibility-label">Warna:</span>
+      <select id="colorSelect" class="color-select" onchange="changeFontColor(this.value)">
+        <option value="#d4af37">Emas (Default)</option>
+        <option value="#f4d03f">Emas Terang</option>
+        <option value="#ffffff">Putih</option>
+        <option value="#e8d5b7">Krem</option>
+        <option value="#c9b037">Kuning Tua</option>
+      </select>
+    </div>
+  </div>
+
   <header>
     <h1>🏆 Lomba MHQ</h1>
     <p class="subtitle">Musabaqoh Hifdzil Quran - Panel Juri/Panitia</p>
@@ -21,7 +78,8 @@
       <div class="intro">
         <h2 style="text-align: center; margin-bottom: 0.5rem; color: var(--gold);">Pilih Paket Soal</h2>
         <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">
-          Setiap peserta mendapatkan 1 paket soal yang berbeda
+          Setiap peserta mendapatkan 1 paket soal yang berbeda<br>
+          <small>(Paket yang sudah digunakan ditandai dengan ✓)</small>
         </p>
       </div>
       
@@ -52,15 +110,122 @@
 
   <script src="data/soal.js"></script>
   <script>
+    // PASSWORD PROTECTION
+    const CORRECT_PASSWORD = 'mardliyahshalihahcantik';
+    
+    function checkPassword() {
+      const input = document.getElementById('passwordInput').value;
+      if (input === CORRECT_PASSWORD) {
+        document.getElementById('passwordModal').style.display = 'none';
+        document.getElementById('resetBtn').style.display = 'block';
+        document.getElementById('accessibilityPanel').style.display = 'flex';
+        localStorage.setItem('mhq_authenticated', 'true');
+        renderDaftarPaket();
+      } else {
+        document.getElementById('passwordError').classList.add('show');
+        document.getElementById('passwordInput').value = '';
+      }
+    }
+    
+    document.getElementById('passwordInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') checkPassword();
+    });
+    
+    // Cek apakah sudah authenticated
+    if (localStorage.getItem('mhq_authenticated') === 'true') {
+      document.getElementById('passwordModal').style.display = 'none';
+      document.getElementById('resetBtn').style.display = 'block';
+      document.getElementById('accessibilityPanel').style.display = 'flex';
+    }
+
+    // LOCALSTORAGE untuk track paket yang sudah digunakan
+    function getUsedPaket() {
+      const used = localStorage.getItem('mhq_used_paket');
+      return used ? JSON.parse(used) : [];
+    }
+    
+    function markPaketUsed(id) {
+      const used = getUsedPaket();
+      if (!used.includes(id)) {
+        used.push(id);
+        localStorage.setItem('mhq_used_paket', JSON.stringify(used));
+      }
+    }
+    
+    function resetUsedPaket() {
+      if (confirm('Yakin ingin reset semua data paket? Semua tanda ✓ akan dihapus.')) {
+        localStorage.removeItem('mhq_used_paket');
+        renderDaftarPaket();
+        alert('Data paket berhasil direset!');
+      }
+    }
+
+    // ACCESSIBILITY SETTINGS
+    let currentFontSize = 24;
+    let currentFontFamily = "'Amiri', 'Traditional Arabic', serif";
+    let currentFontColor = '#d4af37';
+    
+    // Load saved settings
+    function loadAccessibilitySettings() {
+      const savedSize = localStorage.getItem('mhq_font_size');
+      const savedFont = localStorage.getItem('mhq_font_family');
+      const savedColor = localStorage.getItem('mhq_font_color');
+      
+      if (savedSize) {
+        currentFontSize = parseInt(savedSize);
+        updateFontSizeDisplay();
+      }
+      if (savedFont) {
+        currentFontFamily = savedFont;
+        document.getElementById('fontSelect').value = savedFont;
+      }
+      if (savedColor) {
+        currentFontColor = savedColor;
+        document.getElementById('colorSelect').value = savedColor;
+      }
+      
+      applyAccessibilityStyles();
+    }
+    
+    function changeFontSize(delta) {
+      currentFontSize = Math.max(16, Math.min(40, currentFontSize + delta));
+      localStorage.setItem('mhq_font_size', currentFontSize);
+      updateFontSizeDisplay();
+      applyAccessibilityStyles();
+    }
+    
+    function updateFontSizeDisplay() {
+      document.getElementById('fontSizeValue').textContent = currentFontSize + 'px';
+    }
+    
+    function changeFontFamily(font) {
+      currentFontFamily = font;
+      localStorage.setItem('mhq_font_family', font);
+      applyAccessibilityStyles();
+    }
+    
+    function changeFontColor(color) {
+      currentFontColor = color;
+      localStorage.setItem('mhq_font_color', color);
+      applyAccessibilityStyles();
+    }
+    
+    function applyAccessibilityStyles() {
+      document.documentElement.style.setProperty('--arab-font-size', currentFontSize + 'px');
+      document.documentElement.style.setProperty('--arab-font-family', currentFontFamily);
+      document.documentElement.style.setProperty('--arab-color', currentFontColor);
+    }
+
     // Render daftar paket
     function renderDaftarPaket() {
       const grid = document.getElementById('paket-grid');
       grid.innerHTML = '';
+      const used = getUsedPaket();
       
       for (let i = 1; i <= 30; i++) {
         const card = document.createElement('a');
         card.href = '#';
-        card.className = 'paket-card';
+        card.className = 'paket-card' + (used.includes(i) ? ' used' : '');
         card.onclick = () => { showPaket(i); return false; };
         card.innerHTML = `
           <span class="number">${i}</span>
@@ -75,12 +240,16 @@
       document.getElementById('view-daftar').style.display = 'block';
       document.getElementById('view-soal').style.display = 'none';
       window.scrollTo(0, 0);
+      renderDaftarPaket(); // Refresh untuk update status used
     }
 
     // Show detail paket
     function showPaket(id) {
       const paket = PAKET_SOAL.find(p => p.id === id);
       if (!paket) return;
+      
+      // Mark sebagai used
+      markPaketUsed(id);
 
       const container = document.getElementById('soal-container');
       
@@ -140,8 +309,9 @@
             </button>
             
             <div class="kunci-jawaban" id="kunci-${paket.id}-${index}">
-              <span class="kunci-label">🔑 Kunci Jawaban</span>
-              <p class="kunci-text">${soal.kunciJawaban}</p>
+              <span class="kunci-label">🔑 ${soal.kunciLabel || 'Kunci Jawaban'}</span>
+              ${soal.kunciText ? `<p class="kunci-text">${soal.kunciText}</p>` : ''}
+              <div class="kunci-arab">${soal.kunciArab}</div>
             </div>
           </div>
         `;
@@ -152,6 +322,9 @@
       document.getElementById('view-daftar').style.display = 'none';
       document.getElementById('view-soal').style.display = 'block';
       window.scrollTo(0, 0);
+      
+      // Apply accessibility styles ke elemen baru
+      applyAccessibilityStyles();
     }
 
     // Toggle kunci jawaban
@@ -171,7 +344,12 @@
     }
 
     // Initialize
-    document.addEventListener('DOMContentLoaded', renderDaftarPaket);
+    document.addEventListener('DOMContentLoaded', function() {
+      loadAccessibilitySettings();
+      if (localStorage.getItem('mhq_authenticated') === 'true') {
+        renderDaftarPaket();
+      }
+    });
   </script>
 </body>
 </html>

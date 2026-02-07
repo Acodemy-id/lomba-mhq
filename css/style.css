@@ -1,6 +1,6 @@
 /**
  * LOMBA MHQ - Musabaqoh Hifdzil Quran
- * Stylesheet untuk Panitia/Juri
+ * Stylesheet untuk Panitia/Juri - REVISI
  */
 
 :root {
@@ -17,6 +17,11 @@
   --shadow: rgba(0, 0, 0, 0.4);
   --gradient-primary: linear-gradient(135deg, #1a5f3f 0%, #0d3d27 100%);
   --gradient-gold: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+  
+  /* Accessibility Variables */
+  --arab-font-size: 24px;
+  --arab-font-family: 'Amiri', 'Traditional Arabic', serif;
+  --arab-color: #d4af37;
 }
 
 * {
@@ -34,6 +39,209 @@ body {
     radial-gradient(ellipse at top, #1a3d2a 0%, transparent 50%),
     radial-gradient(ellipse at bottom, #0d2818 0%, transparent 50%);
   line-height: 1.6;
+}
+
+/* PASSWORD MODAL */
+.password-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  backdrop-filter: blur(10px);
+}
+
+.password-modal {
+  background: var(--bg-card);
+  border: 2px solid var(--gold);
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+}
+
+.password-modal h2 {
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.password-modal p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.password-modal .lock-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.password-input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.password-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.password-input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.password-btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--gradient-gold);
+  color: var(--bg-dark);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.password-btn:hover {
+  transform: scale(1.05);
+}
+
+.password-error {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.password-error.show {
+  display: block;
+}
+
+/* ACCESSIBILITY PANEL */
+.accessibility-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 10px 30px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 200px;
+}
+
+.accessibility-title {
+  font-size: 0.75rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.accessibility-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.accessibility-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  min-width: 60px;
+}
+
+.font-size-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.font-size-btn {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.font-size-btn:hover {
+  background: var(--gold);
+  color: var(--bg-dark);
+}
+
+.font-size-value {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  min-width: 40px;
+  text-align: center;
+}
+
+.font-select, .color-select {
+  flex: 1;
+  padding: 0.4rem;
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-light);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.font-select:focus, .color-select:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+/* RESET BUTTON */
+.reset-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 107, 107, 0.2);
+  border: 1px solid #ff6b6b;
+  color: #ff6b6b;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  z-index: 999;
+  transition: all 0.2s;
+}
+
+.reset-btn:hover {
+  background: #ff6b6b;
+  color: white;
 }
 
 /* HEADER */
@@ -107,6 +315,34 @@ main {
 
 .paket-card:hover::before {
   transform: scaleX(1);
+}
+
+.paket-card.used {
+  background: #2a2a2a;
+  border-color: #555;
+  opacity: 0.7;
+}
+
+.paket-card.used::after {
+  content: '✓';
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  background: var(--gold);
+  color: var(--bg-dark);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.paket-card.used .number,
+.paket-card.used .label {
+  color: #888;
 }
 
 .paket-card .number {
@@ -239,12 +475,13 @@ main {
   border-radius: 12px;
   padding: 1.5rem;
   margin: 1rem 0;
-  font-family: 'Traditional Arabic', 'Scheherazade', 'Arial', serif;
-  font-size: 1.4rem;
+  font-family: var(--arab-font-family);
+  font-size: var(--arab-font-size);
   text-align: right;
   line-height: 2;
   direction: rtl;
-  color: var(--gold-light);
+  color: var(--arab-color);
+  transition: all 0.3s ease;
 }
 
 .referensi {
@@ -313,9 +550,23 @@ main {
 }
 
 .kunci-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-light);
   line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.kunci-arab {
+  font-family: var(--arab-font-family);
+  font-size: var(--arab-font-size);
+  color: var(--arab-color);
+  text-align: right;
+  direction: rtl;
+  line-height: 2;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
 }
 
 /* ANIMATIONS */
@@ -349,34 +600,6 @@ footer {
   margin-top: 3rem;
 }
 
-/* PRINT STYLES */
-@media print {
-  body {
-    background: white;
-    color: black;
-  }
-  
-  header {
-    background: #1a5f3f !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-  
-  .toggle-btn {
-    display: none;
-  }
-  
-  .kunci-jawaban {
-    display: block !important;
-    border: 1px solid #ccc;
-    background: #f5f5f5;
-  }
-  
-  .back-btn {
-    display: none;
-  }
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
   header h1 {
@@ -404,13 +627,62 @@ footer {
     padding: 1.5rem 1rem;
   }
   
-  .ayat-box {
-    font-size: 1.1rem;
+  .ayat-box, .kunci-arab {
+    font-size: calc(var(--arab-font-size) * 0.8);
     padding: 1rem;
   }
   
   .paket-header {
     flex-direction: column;
     text-align: center;
+  }
+  
+  .accessibility-panel {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    min-width: auto;
+  }
+  
+  .reset-btn {
+    top: 10px;
+    right: 10px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* PRINT STYLES */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  header {
+    background: #1a5f3f !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .toggle-btn,
+  .accessibility-panel,
+  .reset-btn,
+  .password-overlay {
+    display: none !important;
+  }
+  
+  .kunci-jawaban {
+    display: block !important;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+  }
+  
+  .back-btn {
+    display: none;
+  }
+  
+  .ayat-box, .kunci-arab {
+    color: #000 !important;
   }
 }
