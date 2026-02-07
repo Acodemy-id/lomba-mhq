@@ -1,0 +1,416 @@
+/**
+ * LOMBA MHQ - Musabaqoh Hifdzil Quran
+ * Stylesheet untuk Panitia/Juri
+ */
+
+:root {
+  --primary: #1a5f3f;
+  --primary-dark: #0d3d27;
+  --primary-light: #2d8a5e;
+  --gold: #d4af37;
+  --gold-light: #f4d03f;
+  --bg-dark: #0a1f15;
+  --bg-card: #112a1d;
+  --text-light: #f5f5f5;
+  --text-muted: #a0c4b0;
+  --border: #1e4d35;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --gradient-primary: linear-gradient(135deg, #1a5f3f 0%, #0d3d27 100%);
+  --gradient-gold: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(ellipse at top, #1a3d2a 0%, transparent 50%),
+    radial-gradient(ellipse at bottom, #0d2818 0%, transparent 50%);
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: var(--gradient-primary);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-bottom: 3px solid var(--gold);
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--gold-light);
+  text-shadow: 2px 2px 4px var(--shadow);
+  margin-bottom: 0.3rem;
+}
+
+header .subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+/* MAIN CONTAINER */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* PAKET GRID */
+.paket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.paket-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.paket-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-gold);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.paket-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.paket-card:hover::before {
+  transform: scaleX(1);
+}
+
+.paket-card .number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.paket-card .label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid var(--gold);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.back-btn:hover {
+  background: var(--primary-light);
+  transform: translateX(-3px);
+}
+
+.back-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* SOAL CONTAINER */
+.soal-container {
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 10px 40px var(--shadow);
+}
+
+.paket-header {
+  background: var(--gradient-primary);
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid var(--gold);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.paket-header h2 {
+  color: var(--gold-light);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.paket-badge {
+  background: var(--gold);
+  color: var(--bg-dark);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* SOAL ITEM */
+.soal-item {
+  padding: 2rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.soal-item:last-child {
+  border-bottom: none;
+}
+
+.soal-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--gradient-gold);
+  color: var(--bg-dark);
+  font-weight: 700;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.soal-jenis {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: var(--primary);
+  color: var(--text-light);
+  border-radius: 15px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 0.75rem;
+  vertical-align: middle;
+}
+
+.soal-pertanyaan {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* AYAT BOX */
+.ayat-box {
+  background: rgba(26, 95, 63, 0.3);
+  border: 2px solid var(--primary-light);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  font-family: 'Traditional Arabic', 'Scheherazade', 'Arial', serif;
+  font-size: 1.4rem;
+  text-align: right;
+  line-height: 2;
+  direction: rtl;
+  color: var(--gold-light);
+}
+
+.referensi {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: left;
+  font-style: italic;
+}
+
+/* TOGGLE BUTTON */
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--gradient-gold);
+  color: var(--bg-dark);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+}
+
+.toggle-btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn.active svg {
+  transform: rotate(180deg);
+}
+
+/* KUNCI JAWABAN */
+.kunci-jawaban {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background: rgba(212, 175, 55, 0.1);
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  display: none;
+  animation: slideDown 0.3s ease;
+}
+
+.kunci-jawaban.show {
+  display: block;
+}
+
+.kunci-label {
+  font-size: 0.85rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.kunci-text {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ANIMATIONS */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.soal-container {
+  animation: fadeIn 0.5s ease;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+/* PRINT STYLES */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  header {
+    background: #1a5f3f !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .toggle-btn {
+    display: none;
+  }
+  
+  .kunci-jawaban {
+    display: block !important;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+  }
+  
+  .back-btn {
+    display: none;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .paket-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .paket-card {
+    padding: 1rem;
+  }
+  
+  .paket-card .number {
+    font-size: 1.75rem;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  .soal-item {
+    padding: 1.5rem 1rem;
+  }
+  
+  .ayat-box {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+  
+  .paket-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
