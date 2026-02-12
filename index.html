@@ -450,29 +450,14 @@
       `;
 
       paket.soal.forEach((soal, index) => {
-        const jenisLabels = {
-          'sambung': 'Sambung Ayat',
-          'bacakan': 'Bacakan Ayat',
-          'sambung-surat': 'Sambung Surat'
-        };
-
         let contentHTML = '';
         
-        // Potongan ayat untuk soal sambung
-        if (soal.potonganAyat) {
+        // Untuk soal Lanjutkan dan Transisi: tampilkan ayat referensi (pertanyaan)
+        if (soal.tipe !== 'Lantunkan' && soal.pertanyaan) {
           contentHTML += `
             <div class="ayat-box">
-              ${soal.potonganAyat}
-              ${soal.referensi ? `<span class="referensi">📖 ${soal.referensi}</span>` : ''}
-            </div>
-          `;
-        }
-
-        // Info rentang ayat untuk soal bacakan
-        if (soal.rentangAyat) {
-          contentHTML += `
-            <div style="background: var(--primary); padding: 0.75rem 1rem; border-radius: 8px; margin: 1rem 0; display: inline-block;">
-              <strong style="color: var(--gold);">📖 ${soal.rentangAyat}</strong>
+              ${soal.pertanyaan}
+              <span class="referensi">📖 ${soal.kunciJawaban.surah} ayat ${soal.kunciJawaban.ayat}</span>
             </div>
           `;
         }
@@ -481,9 +466,9 @@
           <div class="soal-item">
             <div>
               <span class="soal-number">${soal.nomor}</span>
-              <span class="soal-jenis">${jenisLabels[soal.jenis] || soal.jenis}</span>
+              <span class="soal-jenis">${soal.tipe}</span>
             </div>
-            <p class="soal-pertanyaan">${soal.pertanyaan}</p>
+            <p class="soal-pertanyaan">${soal.perintah}</p>
             ${contentHTML}
             
             <button class="toggle-btn" onclick="toggleKunci(this, ${paket.id}, ${index})">
@@ -495,9 +480,8 @@
             </button>
             
             <div class="kunci-jawaban" id="kunci-${paket.id}-${index}">
-              <span class="kunci-label">🔑 ${soal.kunciLabel || 'Kunci Jawaban'}</span>
-              ${soal.kunciText ? `<p class="kunci-text">${soal.kunciText}</p>` : ''}
-              <div class="kunci-arab">${soal.kunciArab}</div>
+              <span class="kunci-label">🔑 Kunci Jawaban: ${soal.kunciJawaban.surah} ayat ${soal.kunciJawaban.ayat}</span>
+              <div class="kunci-arab">${soal.kunciJawaban.teks}</div>
             </div>
           </div>
         `;
