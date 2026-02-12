@@ -1,15 +1,14 @@
 // API Route: /api/state
 // Mengambil daftar paket yang sudah digunakan dari Vercel Blob
 
-import { get, put } from '@vercel/blob';
+import { get } from '@vercel/blob';
 
 const BLOB_KEY = 'mhq-used-paket.json';
 
-// In-memory fallback
+// Shared memory store (akan di-reset saat serverless cold start)
 let memoryStore = { used: [] };
 
 export default async function handler(req, res) {
-  // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -20,55 +19,35 @@ export default async function handler(req, res) {
 
   try {
     if (req.method === 'GET') {
-      // Cek apakah BLOB_READ_WRITE_TOKEN tersedia
       const hasBlobToken = process.env.BLOB_READ_WRITE_TOKEN;
       
       if (hasBlobToken) {
-        // Ambil data dari Blob
         try {
           const blob = await get(BLOB_KEY);
+          console.log('State GET - Blob retrieved:', blob ? 'yes' : 'no');
+          
           if (blob) {
             const text = await blob.text();
+            console.log('State GET - Blob text:', text.substring(0, 100));
+            
             const data = JSON.parse(text);
-            return res.status(200).json({ used: data.used || [] });
+            const used = data.used || [];
+            
+            // Update memory store juga
+            memoryStore.used = used;
+            
+            return res.status(200).json({ used });
+          } else {
+            console.log('State GET - Blob not found, using memory:', memoryStore.used);
           }
         } catch (e) {
-          console.log('Blob get error:', e.message);
+          console.error('State GET - Blob error:', e.message);
         }
       } else {
-        console.log('Using memory store (no BLOB_READ_WRITE_TOKEN)');
+        console.log('State GET - No BLOB token, using memory:', memoryStore.used);
       }
       
-      // Return memory fallback atau empty
       return res.status(200).json({ used: memoryStore.used });
-    }
-
-    if (req.method === 'POST') {
-      const { used } = req.body;
-      
-      if (!Array.isArray(used)) {
-        return res.status(400).json({ error: 'Invalid data format' });
-      }
-
-      const hasBlobToken = process.env.BLOB_READ_WRITE_TOKEN;
-      
-      if (hasBlobToken) {
-        // Simpan ke Blob
-        try {
-          await put(BLOB_KEY, JSON.stringify({ used, updatedAt: new Date().toISOString() }), {
-            contentType: 'application/json',
-            access: 'public',
-          });
-        } catch (blobError) {
-          console.error('Blob put error:', blobError);
-          memoryStore.used = used;
-        }
-      } else {
-        // Simpan ke memory
-        memoryStore.used = used;
-      }
-
-      return res.status(200).json({ success: true, used });
     }
 
     return res.status(405).json({ error: 'Method not allowed' });

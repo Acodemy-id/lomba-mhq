@@ -5,7 +5,7 @@ import { put } from '@vercel/blob';
 
 const BLOB_KEY = 'mhq-used-paket.json';
 
-// In-memory fallback
+// Shared memory store
 let memoryStore = { used: [] };
 
 export default async function handler(req, res) {
@@ -22,10 +22,14 @@ export default async function handler(req, res) {
   }
 
   try {
+    console.log('Reset - Starting reset...');
+    
     // Reset memory
     memoryStore.used = [];
+    console.log('Reset - Memory store cleared');
     
     const hasBlobToken = process.env.BLOB_READ_WRITE_TOKEN;
+    console.log('Reset - Has BLOB token:', hasBlobToken ? 'yes' : 'no');
     
     if (hasBlobToken) {
       // Reset ke array kosong di Blob
@@ -34,11 +38,12 @@ export default async function handler(req, res) {
           contentType: 'application/json',
           access: 'public',
         });
+        console.log('Reset - Blob reset success');
       } catch (blobError) {
-        console.error('Blob put error:', blobError);
+        console.error('Reset - Blob put error:', blobError);
       }
     } else {
-      console.log('Reset memory store (no BLOB_READ_WRITE_TOKEN)');
+      console.log('Reset - No BLOB token, memory only');
     }
 
     return res.status(200).json({ success: true, used: [] });
