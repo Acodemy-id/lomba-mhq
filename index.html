@@ -426,16 +426,16 @@
       startSync();
     }
 
-    // Format ayat dengan simbol pembatas di ujung setiap ayat
+    // Format ayat dengan simbol pembatas antar ayat
     function formatAyatDenganPembatas(ayatTeks, ayatRange) {
       if (!ayatTeks || !ayatRange) return ayatTeks;
       
-      // Split ayat berdasarkan pattern akhir ayat (spasi sebelum ayat baru)
-      // Pattern: cari spasi yang diikuti oleh karakter Arab
+      // Split ayat menjadi array individual
+      // Pattern: cari spasi yang diikuti oleh karakter Arab (awal ayat baru)
       const ayatList = ayatTeks.split(/(?=\s+[\u0600-\u06FF])/).filter(a => a.trim());
       
-      // Tambahkan simbol pembatas ۝ di akhir setiap ayat
-      return ayatList.map(ayat => ayat.trim() + ' ۝').join(' ');
+      // Join ayat dengan simbol ۝ sebagai pemisah antar ayat
+      return ayatList.join(' ۝ ');
     }
 
     // Show detail paket
