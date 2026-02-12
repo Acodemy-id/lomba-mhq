@@ -5,7 +5,7 @@
 
 const dataSoal = [
   {
-    "paket": 1,
+    "id": 1,
     "soal": [
       {
         "nomor": 1,
@@ -54,7 +54,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 2,
+    "id": 2,
     "soal": [
       {
         "nomor": 1,
@@ -103,7 +103,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 3,
+    "id": 3,
     "soal": [
       {
         "nomor": 1,
@@ -152,7 +152,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 4,
+    "id": 4,
     "soal": [
       {
         "nomor": 1,
@@ -201,7 +201,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 5,
+    "id": 5,
     "soal": [
       {
         "nomor": 1,
@@ -250,7 +250,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 6,
+    "id": 6,
     "soal": [
       {
         "nomor": 1,
@@ -299,7 +299,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 7,
+    "id": 7,
     "soal": [
       {
         "nomor": 1,
@@ -348,7 +348,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 8,
+    "id": 8,
     "soal": [
       {
         "nomor": 1,
@@ -397,7 +397,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 9,
+    "id": 9,
     "soal": [
       {
         "nomor": 1,
@@ -446,7 +446,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 10,
+    "id": 10,
     "soal": [
       {
         "nomor": 1,
@@ -495,7 +495,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 11,
+    "id": 11,
     "soal": [
       {
         "nomor": 1,
@@ -544,7 +544,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 12,
+    "id": 12,
     "soal": [
       {
         "nomor": 1,
@@ -593,7 +593,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 13,
+    "id": 13,
     "soal": [
       {
         "nomor": 1,
@@ -642,7 +642,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 14,
+    "id": 14,
     "soal": [
       {
         "nomor": 1,
@@ -691,7 +691,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 15,
+    "id": 15,
     "soal": [
       {
         "nomor": 1,
@@ -740,7 +740,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 16,
+    "id": 16,
     "soal": [
       {
         "nomor": 1,
@@ -789,7 +789,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 17,
+    "id": 17,
     "soal": [
       {
         "nomor": 1,
@@ -838,7 +838,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 18,
+    "id": 18,
     "soal": [
       {
         "nomor": 1,
@@ -887,7 +887,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 19,
+    "id": 19,
     "soal": [
       {
         "nomor": 1,
@@ -936,7 +936,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 20,
+    "id": 20,
     "soal": [
       {
         "nomor": 1,
@@ -985,7 +985,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 21,
+    "id": 21,
     "soal": [
       {
         "nomor": 1,
@@ -1034,7 +1034,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 22,
+    "id": 22,
     "soal": [
       {
         "nomor": 1,
@@ -1083,7 +1083,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 23,
+    "id": 23,
     "soal": [
       {
         "nomor": 1,
@@ -1132,7 +1132,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 24,
+    "id": 24,
     "soal": [
       {
         "nomor": 1,
@@ -1181,7 +1181,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 25,
+    "id": 25,
     "soal": [
       {
         "nomor": 1,
@@ -1230,7 +1230,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 26,
+    "id": 26,
     "soal": [
       {
         "nomor": 1,
@@ -1279,7 +1279,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 27,
+    "id": 27,
     "soal": [
       {
         "nomor": 1,
@@ -1328,7 +1328,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 28,
+    "id": 28,
     "soal": [
       {
         "nomor": 1,
@@ -1377,7 +1377,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 29,
+    "id": 29,
     "soal": [
       {
         "nomor": 1,
@@ -1426,7 +1426,7 @@ const dataSoal = [
     ]
   },
   {
-    "paket": 30,
+    "id": 30,
     "soal": [
       {
         "nomor": 1,
@@ -1479,3 +1479,6 @@ const dataSoal = [
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = dataSoal;
 }
+
+// Alias untuk kompatibilitas dengan UI lama
+const PAKET_SOAL = dataSoal;
