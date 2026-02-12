@@ -209,7 +209,7 @@
     if (localStorage.getItem('mhq_authenticated') === 'true') {
       document.getElementById('passwordModal').style.display = 'none';
       document.getElementById('resetBtn').style.display = 'block';
-      document.getElementById('accessibilityPanel').style.display = 'flex';
+      document.getElementById('accessibilityToggle').style.display = 'flex';
     }
 
     // SERVER-SIDE STATE MANAGEMENT (Upstash Redis + LocalStorage sync/fallback)
@@ -400,6 +400,9 @@
     function toggleAccessibilityPanel() {
       const panel = document.getElementById('accessibilityPanel');
       const toggle = document.getElementById('accessibilityToggle');
+      
+      // Clear inline display style first (from logout or init)
+      panel.style.display = '';
       
       if (panel.classList.contains('show')) {
         panel.classList.remove('show');
