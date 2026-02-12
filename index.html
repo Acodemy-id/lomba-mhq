@@ -434,8 +434,8 @@
       // Pattern: cari spasi yang diikuti oleh karakter Arab
       const ayatList = ayatTeks.split(/(?=\s+[\u0600-\u06FF])/).filter(a => a.trim());
       
-      // Tambahkan simbol pembatas ⬛ di akhir setiap ayat
-      return ayatList.map(ayat => ayat.trim() + ' ⬛').join(' ');
+      // Tambahkan simbol pembatas ۝ di akhir setiap ayat
+      return ayatList.map(ayat => ayat.trim() + ' ۝').join(' ');
     }
 
     // Show detail paket
