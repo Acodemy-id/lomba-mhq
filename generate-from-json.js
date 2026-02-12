@@ -211,7 +211,7 @@ function generateSoal() {
   const paketSoal = [];
   
   for (const paket of soalData) {
-    const soalPaket = { paket: paket.paket, soal: [] };
+    const soalPaket = { id: paket.paket, soal: [] };
     
     for (let i = 0; i < paket.soal.length; i++) {
       const s = paket.soal[i];
