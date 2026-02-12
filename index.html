@@ -440,8 +440,11 @@
 
     // Show detail paket
     async function showPaket(id) {
-      console.log('showPaket called with id:', id);
-      const paket = PAKET_SOAL.find(p => p.id === id);
+      console.log('showPaket called with id:', id, 'type:', typeof id);
+      console.log('PAKET_SOAL:', PAKET_SOAL);
+      console.log('First paket:', PAKET_SOAL[0]);
+      const paket = PAKET_SOAL.find(p => Number(p.id) === Number(id));
+      console.log('Found paket:', paket);
       console.log('Found paket:', paket);
       if (!paket) {
         console.error('Paket not found for id:', id);
