@@ -540,12 +540,12 @@
         let contentHTML = '';
         
         // Untuk soal Lanjutkan dan Transisi: tampilkan ayat referensi (pertanyaan)
+        // Referensi surat+ayat dihapus dari ayat-box untuk soal nomor 2, 3, 4 (hanya tampil di kunci jawaban)
         if (soal.tipe !== 'Lantunkan' && soal.pertanyaan) {
           const pertanyaanFormatted = formatAyatDenganPembatas([soal.pertanyaan]);
           contentHTML += `
             <div class="ayat-box">
               ${pertanyaanFormatted}
-              <span class="referensi">📖 ${soal.kunciJawaban.surah} ayat ${soal.kunciJawaban.ayat}</span>
             </div>
           `;
         }
